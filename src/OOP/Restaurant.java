@@ -17,6 +17,7 @@ public class Restaurant {
         // TODO code application logic here
         System.out.println("Hello");
         System.out.println("yo yo");
+        System.out.println("Hi kelle");
     }
     
 }
