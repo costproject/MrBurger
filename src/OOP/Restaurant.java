@@ -9,7 +9,6 @@ package OOP;
  * @author Sandun Siwantha
  */
 public class Restaurant {
-
     /**
      * @param args the command line arguments
      */
@@ -17,8 +16,6 @@ public class Restaurant {
         // TODO code application logic here
         System.out.println("Hello");
         System.out.println("yo yo");
-        System.out.println("Hi kelle");
         System.out.println("Comment From Sandun");
     }
-    
 }
