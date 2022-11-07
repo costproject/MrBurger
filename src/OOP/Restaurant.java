@@ -18,5 +18,6 @@ public class Restaurant {
         System.out.println("yo yo");
         System.out.println("Comment From Sandun");
         System.out.println("hello im muditha");
+        System.out.println("im sandun");
     }
 }
