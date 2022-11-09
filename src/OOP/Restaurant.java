@@ -14,11 +14,5 @@ public class Restaurant {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hello");
-        System.out.println("yo yo");
-        System.out.println("Comment From Sandun");
-        System.out.println("hello im muditha");
-        System.out.println("im sandun");
-        System.out.println("im senu");
     }
 }
