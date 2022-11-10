@@ -1,0 +1,15 @@
+* display size		- 1080 x 720
+* font 			-
+* Main color		-
+* Secondary colour	-
+
+
+* restaurant type 	- fast food
+* restaurant name	- 
+* food item 	- burger pizza , cool drinks , salad .
+* designing - interface designing, logo, images (freepic)
+
+login , welcome, designing.
+orders
+stock
+employee
