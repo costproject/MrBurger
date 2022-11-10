@@ -4,7 +4,7 @@
 * Secondary colour	-
 
 
-* restaurant type 	- fast food
+* restaurant type 	- fast food *******
 * restaurant name	- 
 * food item 	- burger pizza , cool drinks , salad .
 * designing - interface designing, logo, images (freepic)
@@ -13,3 +13,4 @@ login , welcome, designing.
 orders
 stock
 employee
+*database
