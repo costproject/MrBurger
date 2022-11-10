@@ -26,6 +26,7 @@ public class Welcome extends javax.swing.JFrame {
     private void initComponents() {
 
         welcomePanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,15 +37,17 @@ public class Welcome extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wallpaper.jpg"))); // NOI18N
+
         javax.swing.GroupLayout welcomePanelLayout = new javax.swing.GroupLayout(welcomePanel);
         welcomePanel.setLayout(welcomePanelLayout);
         welcomePanelLayout.setHorizontalGroup(
             welcomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 891, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         welcomePanelLayout.setVerticalGroup(
             welcomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 534, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -63,7 +66,7 @@ public class Welcome extends javax.swing.JFrame {
 
     private void welcomePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_welcomePanelMouseClicked
         // TODO add your handling code here:
-        Home hm = new Home();
+        Login hm = new Login();
         hm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_welcomePanelMouseClicked
@@ -104,6 +107,7 @@ public class Welcome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel welcomePanel;
     // End of variables declaration//GEN-END:variables
 }
