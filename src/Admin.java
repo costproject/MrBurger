@@ -30,17 +30,31 @@ public class Admin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        order = new javax.swing.JLabel();
         stockManagement = new javax.swing.JLabel();
+        cust_id = new javax.swing.JTextField();
+        order1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         logout = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
+        FLname = new javax.swing.JTextField();
+        Number = new javax.swing.JTextField();
+        LUser = new javax.swing.JLabel();
+        boderReg = new javax.swing.JLabel();
+        LUser1 = new javax.swing.JLabel();
+        email1 = new javax.swing.JTextField();
+        LUser2 = new javax.swing.JLabel();
+        order = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,17 +62,6 @@ public class Admin extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        order.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        order.setText("PLACE ORDER");
-        order.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        order.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        order.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                orderMouseClicked(evt);
-            }
-        });
-        jPanel1.add(order, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 73, 133, 43));
 
         stockManagement.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stockManagement.setText("STOCK");
@@ -69,7 +72,22 @@ public class Admin extends javax.swing.JFrame {
                 stockManagementMouseClicked(evt);
             }
         });
-        jPanel1.add(stockManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 128, 133, 43));
+        jPanel1.add(stockManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 133, 43));
+        jPanel1.add(cust_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 130, -1));
+
+        order1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        order1.setText("PLACE ORDER");
+        order1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        order1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        order1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                order1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(order1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 133, 43));
+
+        jLabel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CUSTOMER ID", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 150, 120));
 
         logout.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logout.setText("LOGOUT");
@@ -88,44 +106,9 @@ public class Admin extends javax.swing.JFrame {
         });
         jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 18, 133, 43));
 
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Item-Id", "Item-Name", "Item-Price"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
-        }
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("MENU", jPanel2);
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -133,7 +116,66 @@ public class Admin extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Order-Id", "Date", "Time", "Total Price"
+                "Item_Id", "Item_Name", "Item_Price", "Quantity"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setResizable(false);
+            jTable1.getColumnModel().getColumn(1).setResizable(false);
+            jTable1.getColumnModel().getColumn(2).setResizable(false);
+            jTable1.getColumnModel().getColumn(3).setResizable(false);
+        }
+
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, 560));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MENU", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 16, 480, 610));
+        jPanel2.add(FLname, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 110, 160, -1));
+        jPanel2.add(Number, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 160, -1));
+
+        LUser.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LUser.setText("Mobile Number :");
+        jPanel2.add(LUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
+
+        boderReg.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        boderReg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        boderReg.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "REGISTRATION", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        jPanel2.add(boderReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 320, 210));
+
+        LUser1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LUser1.setText("First & Last Name :");
+        jPanel2.add(LUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, -1, -1));
+        jPanel2.add(email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 160, -1));
+
+        LUser2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LUser2.setText("Email :");
+        jPanel2.add(LUser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, -1, -1));
+
+        order.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        order.setText("OK");
+        order.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        order.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        order.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                orderMouseClicked(evt);
+            }
+        });
+        jPanel2.add(order, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 133, 43));
+
+        jTabbedPane1.addTab("MENU & CUSTOMER REGISTRATION", jPanel2);
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Order_Id", "Cust_Id", "Date", "Time", "Discount", "Total Price"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
@@ -145,30 +187,62 @@ public class Admin extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 783, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("ORDERS", jPanel3);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Cust_Id", "Cust_Name", "Email", "Mobile_No"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 825, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 796, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("ABOUT US", jPanel4);
+        jTabbedPane1.addTab("CUSTOMERS", jPanel4);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 830, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 695, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("ABOUT US", jPanel5);
 
         jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 18, -1, -1));
 
@@ -183,7 +257,7 @@ public class Admin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 710, Short.MAX_VALUE)
         );
 
         pack();
@@ -219,6 +293,13 @@ public class Admin extends javax.swing.JFrame {
         od.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_orderMouseClicked
+
+    private void order1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_order1MouseClicked
+        // TODO add your handling code here:
+        Oders od = new Oders();
+        od.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_order1MouseClicked
 
     public void setColor(JLabel p){
         p.setBackground(new Color(205,200,35));
@@ -262,18 +343,32 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField FLname;
+    private javax.swing.JLabel LUser;
+    private javax.swing.JLabel LUser1;
+    private javax.swing.JLabel LUser2;
+    private javax.swing.JTextField Number;
+    private javax.swing.JLabel boderReg;
+    private javax.swing.JTextField cust_id;
+    private javax.swing.JTextField email1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JLabel logout;
     private javax.swing.JLabel order;
+    private javax.swing.JLabel order1;
     private javax.swing.JLabel stockManagement;
     // End of variables declaration//GEN-END:variables
 }
