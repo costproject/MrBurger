@@ -26,53 +26,74 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pass = new javax.swing.JPasswordField();
-        text = new javax.swing.JTextField();
+        logo = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
         sign = new javax.swing.JLabel();
+        user = new javax.swing.JLabel();
+        pass = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1080, 720));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        sign.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        sign.setText("SIGN");
-        sign.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logo1.png"))); // NOI18N
+        logo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        logo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        logo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoMouseClicked(evt);
+            }
+        });
+        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 250, 290));
+
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setBorder(null);
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, 250, 40));
+
+        jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPasswordField1.setMinimumSize(new java.awt.Dimension(64, 16));
+        jPasswordField1.setPreferredSize(new java.awt.Dimension(64, 16));
+        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, 250, 40));
+
+        sign.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logo 3.png"))); // NOI18N
         sign.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sign.setMaximumSize(new java.awt.Dimension(1500, 1500));
         sign.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 signMouseClicked(evt);
             }
         });
+        getContentPane().add(sign, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 470, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(429, 429, 429)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(text, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(pass)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(496, 496, 496)
-                        .addComponent(sign, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(451, 451, 451))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(sign)
-                .addContainerGap(452, Short.MAX_VALUE))
-        );
+        user.setBackground(new java.awt.Color(255, 255, 255));
+        user.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        user.setText("USERNAME :");
+        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 120, -1));
+
+        pass.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        pass.setText("PASSWORD :");
+        getContentPane().add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
+
+        jLabel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Admin Login", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        jLabel2.setName("Admin Login"); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, 460, 260));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/background-4.jpg"))); // NOI18N
+        jLabel1.setText("Admin Login");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 720));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void logoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoMouseClicked
+        // TODO add your handling code here:
+        Welcome ad = new Welcome();
+        ad.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_logoMouseClicked
 
     private void signMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signMouseClicked
         // TODO add your handling code here:
@@ -117,8 +138,13 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField pass;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel pass;
     private javax.swing.JLabel sign;
-    private javax.swing.JTextField text;
+    private javax.swing.JLabel user;
     // End of variables declaration//GEN-END:variables
 }

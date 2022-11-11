@@ -27,6 +27,7 @@ public class Welcome extends javax.swing.JFrame {
 
         welcomePanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        Wallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,19 +37,13 @@ public class Welcome extends javax.swing.JFrame {
                 welcomePanelMouseClicked(evt);
             }
         });
+        welcomePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Wallpaper2.jpg"))); // NOI18N
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        welcomePanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 500, 150));
 
-        javax.swing.GroupLayout welcomePanelLayout = new javax.swing.GroupLayout(welcomePanel);
-        welcomePanel.setLayout(welcomePanelLayout);
-        welcomePanelLayout.setHorizontalGroup(
-            welcomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        welcomePanelLayout.setVerticalGroup(
-            welcomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        Wallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wallpaper3.jpg"))); // NOI18N
+        welcomePanel.add(Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,6 +102,7 @@ public class Welcome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Wallpaper;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel welcomePanel;
     // End of variables declaration//GEN-END:variables
