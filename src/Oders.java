@@ -33,71 +33,23 @@ public class Oders extends javax.swing.JFrame {
         grTotal = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        exit = new javax.swing.JLabel();
+        back2 = new javax.swing.JLabel();
+        clear = new javax.swing.JLabel();
+        enter = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        reset2 = new javax.swing.JLabel();
+        total = new javax.swing.JLabel();
+        jTextField23 = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
-        jCheckBox13 = new javax.swing.JCheckBox();
-        jCheckBox14 = new javax.swing.JCheckBox();
-        jCheckBox15 = new javax.swing.JCheckBox();
-        jCheckBox16 = new javax.swing.JCheckBox();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
         jCheckBox19 = new javax.swing.JCheckBox();
         jCheckBox20 = new javax.swing.JCheckBox();
         jCheckBox21 = new javax.swing.JCheckBox();
@@ -114,18 +66,72 @@ public class Oders extends javax.swing.JFrame {
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        exit = new javax.swing.JLabel();
-        back2 = new javax.swing.JLabel();
-        clear = new javax.swing.JLabel();
-        enter = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
-        reset2 = new javax.swing.JLabel();
-        total = new javax.swing.JLabel();
-        jTextField23 = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jCheckBox7 = new javax.swing.JCheckBox();
+        jCheckBox8 = new javax.swing.JCheckBox();
+        jCheckBox9 = new javax.swing.JCheckBox();
+        jCheckBox10 = new javax.swing.JCheckBox();
+        jCheckBox11 = new javax.swing.JCheckBox();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jCheckBox13 = new javax.swing.JCheckBox();
+        jCheckBox14 = new javax.swing.JCheckBox();
+        jCheckBox15 = new javax.swing.JCheckBox();
+        jCheckBox16 = new javax.swing.JCheckBox();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        jTextField16 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        burgerBoder = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -148,7 +154,7 @@ public class Oders extends javax.swing.JFrame {
                 grTotalMouseExited(evt);
             }
         });
-        jPanel1.add(grTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 600, 100, 30));
+        jPanel1.add(grTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 590, 100, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Cust_Id :");
@@ -158,492 +164,33 @@ public class Oders extends javax.swing.JFrame {
         jLabel4.setText("Date :");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 6, 50, -1));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "BURGERS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 51, 260, 200));
-
-        jCheckBox1.setText("Chicken Burger");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 83, -1, -1));
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("-");
-        jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 82, 14, 22));
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("+");
-        jLabel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel5.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 82, 14, 22));
-
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("00");
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 82, 31, -1));
-
-        jCheckBox2.setText("Beef Burger");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 111, -1, -1));
-
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("-");
-        jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 110, 14, 22));
-
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("00");
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 110, 31, -1));
-
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("+");
-        jLabel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel7.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 110, 14, 22));
-
-        jCheckBox3.setText("Crispy Chicken Burger");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 139, -1, -1));
-
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("-");
-        jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 138, 14, 22));
-
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField3.setText("00");
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 138, 31, -1));
-
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("+");
-        jLabel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel9.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 138, 14, 22));
-
-        jCheckBox4.setText("Chicken Cheese Burger");
-        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 167, -1, -1));
-
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("-");
-        jLabel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 166, 14, 22));
-
-        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField4.setText("00");
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 166, 31, -1));
-
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("+");
-        jLabel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel11.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 166, 14, 22));
-
-        jCheckBox5.setText("Creamy Mushroom Bg.");
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 195, -1, -1));
-
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("-");
-        jLabel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 194, 14, 22));
-
-        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField5.setText("00");
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 194, 31, -1));
-
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("+");
-        jLabel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel13.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 194, 14, 22));
-
-        jCheckBox6.setText("Grilled - Prawn Burger");
-        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox6ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 223, -1, -1));
-
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("-");
-        jLabel14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 222, 14, 22));
-
-        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField6.setText("00");
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 222, 31, -1));
-
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("+");
-        jLabel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel15.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 222, 14, 22));
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel16.setText("APPETIZERS");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 262, 149, -1));
-
-        jCheckBox7.setText("French Fries");
-        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox7ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 294, -1, -1));
-
-        jCheckBox8.setText("Chicken Wings");
-        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox8ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 322, -1, -1));
-
-        jCheckBox9.setText("Cheese Garlic Bread");
-        jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox9ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 350, -1, -1));
-
-        jCheckBox10.setText("Onion Rings");
-        jCheckBox10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox10ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 378, -1, -1));
-
-        jCheckBox11.setText("Cheese Sticks");
-        jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox11ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 406, -1, -1));
-
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("-");
-        jLabel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 405, 14, 22));
-
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("-");
-        jLabel19.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 377, 14, 22));
-
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("-");
-        jLabel20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 349, 14, 22));
-
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("-");
-        jLabel21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 321, 14, 22));
-
-        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("-");
-        jLabel22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 293, 14, 22));
-
-        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField7.setText("00");
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 293, 31, -1));
-
-        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField8.setText("00");
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 321, 31, -1));
-
-        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField9.setText("00");
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 349, 31, -1));
-
-        jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField10.setText("00");
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 377, 31, -1));
-
         jTextField11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField11.setText("00");
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 405, 31, -1));
+        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, 50, 20));
 
-        jTextField12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField12.setText("00");
-        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 530, 50, 20));
-
-        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel24.setText("+");
-        jLabel24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel24.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 405, 14, 22));
-
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setText("+");
-        jLabel25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel25.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 377, 14, 22));
-
-        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("+");
-        jLabel26.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel26.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 349, 14, 22));
-
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("+");
-        jLabel27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel27.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 321, 14, 22));
-
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("+");
-        jLabel28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel28.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 293, 14, 22));
-
-        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel29.setText("DESSERTS");
-        jPanel1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 149, -1));
-
-        jCheckBox13.setText("Cheese Cake");
-        jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox13ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, -1, -1));
-
-        jCheckBox14.setText("Chocolate Cupcake");
-        jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox14ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox14, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, -1, -1));
-
-        jCheckBox15.setText("Lava Cake");
-        jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox15ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, -1, -1));
-
-        jCheckBox16.setText("Honey Waffle");
-        jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox16ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox16, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, -1, -1));
-
-        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel32.setText("-");
-        jLabel32.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 14, 22));
-
-        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel33.setText("-");
-        jLabel33.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 14, 22));
-
-        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel34.setText("-");
-        jLabel34.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 14, 22));
-
-        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel35.setText("-");
-        jLabel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 14, 22));
-
-        jTextField13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField13.setText("00");
-        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 31, -1));
-
-        jTextField14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField14.setText("00");
-        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 31, -1));
-
-        jTextField15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField15.setText("00");
-        jPanel1.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 31, -1));
-
-        jTextField16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField16.setText("00");
-        jPanel1.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, 31, -1));
-
-        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel38.setText("+");
-        jLabel38.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel38.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 14, 22));
-
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("+");
-        jLabel39.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel39.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 14, 22));
-
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel40.setText("+");
-        jLabel40.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel40.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 14, 22));
-
-        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel41.setText("+");
-        jLabel41.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel41.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, 14, 22));
-
-        jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel42.setText("BEVERAGES");
-        jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 51, 149, -1));
-
-        jCheckBox19.setText("Soft Drinks");
-        jCheckBox19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox19ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox19, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 83, -1, -1));
-
-        jCheckBox20.setText("Chocolate Milkshake");
-        jCheckBox20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox20ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox20, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 111, -1, -1));
-
-        jCheckBox21.setText("Vanilla Milkshake");
-        jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox21ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox21, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 139, -1, -1));
-
-        jCheckBox22.setText("Passion");
-        jCheckBox22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox22ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox22, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 167, -1, -1));
-
-        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel45.setText("-");
-        jLabel45.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(487, 166, 14, 22));
-
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel46.setText("-");
-        jLabel46.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(487, 138, 14, 22));
-
-        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel47.setText("-");
-        jLabel47.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(487, 110, 14, 22));
-
-        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel48.setText("-");
-        jLabel48.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(487, 82, 14, 22));
-
-        jTextField19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField19.setText("00");
-        jPanel1.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 82, 31, -1));
-
-        jTextField20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField20.setText("00");
-        jPanel1.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 110, 31, -1));
-
-        jTextField21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField21.setText("00");
-        jPanel1.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 138, 31, -1));
-
-        jTextField22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField22.setText("00");
-        jPanel1.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 166, 31, -1));
-
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel51.setText("+");
-        jLabel51.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel51.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(544, 166, 14, 22));
-
-        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel52.setText("+");
-        jLabel52.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel52.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(544, 138, 14, 22));
-
-        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel53.setText("+");
-        jLabel53.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel53.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(544, 110, 14, 22));
-
-        jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel54.setText("+");
-        jLabel54.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel54.setPreferredSize(new java.awt.Dimension(8, 16));
-        jPanel1.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(544, 82, 14, 22));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Item_Id", "Item_Name", "Price", "Quantity", "Amount"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(187, Short.MAX_VALUE))
-        );
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 351, 332));
+
+        jLabel17.setFont(new java.awt.Font("STXingkai", 1, 48)); // NOI18N
+        jLabel17.setText("Mr. Burger");
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 220, 90));
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logo 3.png"))); // NOI18N
+        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 110, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 60, 430, 570));
 
@@ -713,12 +260,12 @@ public class Oders extends javax.swing.JFrame {
                 enterMouseExited(evt);
             }
         });
-        jPanel1.add(enter, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 530, 70, 20));
-        jPanel1.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 600, 100, 30));
+        jPanel1.add(enter, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 520, 70, 20));
+        jPanel1.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 590, 100, 30));
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel30.setText("DISCOUNT");
-        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 120, 20));
+        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 120, 20));
 
         reset2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         reset2.setText("RESET");
@@ -735,7 +282,7 @@ public class Oders extends javax.swing.JFrame {
                 reset2MouseExited(evt);
             }
         });
-        jPanel1.add(reset2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 600, 70, 30));
+        jPanel1.add(reset2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 70, 30));
 
         total.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         total.setText("TOTAL");
@@ -752,8 +299,481 @@ public class Oders extends javax.swing.JFrame {
                 totalMouseExited(evt);
             }
         });
-        jPanel1.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 80, 30));
-        jPanel1.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, 100, 30));
+        jPanel1.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, 80, 30));
+        jPanel1.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, 100, 30));
+
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel29.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DESSERTS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 240, 150));
+
+        jCheckBox19.setText("Soft Drinks");
+        jCheckBox19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox19ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jCheckBox19, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 58, -1, -1));
+
+        jCheckBox20.setText("Chocolate Milkshake");
+        jCheckBox20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox20ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jCheckBox20, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 86, -1, -1));
+
+        jCheckBox21.setText("Vanilla Milkshake");
+        jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox21ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jCheckBox21, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 114, -1, -1));
+
+        jCheckBox22.setText("Passion");
+        jCheckBox22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox22ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jCheckBox22, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 142, -1, -1));
+
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel45.setText("-");
+        jLabel45.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel4.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 141, 14, 22));
+
+        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel46.setText("-");
+        jLabel46.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel4.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 113, 14, 22));
+
+        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel47.setText("-");
+        jLabel47.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel4.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 85, 14, 22));
+
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("-");
+        jLabel48.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel4.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 57, 14, 22));
+
+        jTextField19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField19.setText("00");
+        jPanel4.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 57, 31, -1));
+
+        jTextField20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField20.setText("00");
+        jPanel4.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 85, 31, -1));
+
+        jTextField21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField21.setText("00");
+        jPanel4.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 113, 31, -1));
+
+        jTextField22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField22.setText("00");
+        jPanel4.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 141, 31, -1));
+
+        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel51.setText("+");
+        jLabel51.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel51.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel4.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 141, 14, 22));
+
+        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel52.setText("+");
+        jLabel52.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel52.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel4.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 113, 14, 22));
+
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel53.setText("+");
+        jLabel53.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel53.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel4.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 85, 14, 22));
+
+        jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel54.setText("+");
+        jLabel54.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel54.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel4.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 57, 14, 22));
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 270, 200));
+
+        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "APPETIZERS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 24, 240, 180));
+
+        jCheckBox7.setText("French Fries");
+        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox7ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 63, -1, -1));
+
+        jCheckBox8.setText("Chicken Wings");
+        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox8ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 91, -1, -1));
+
+        jCheckBox9.setText("Cheese Garlic Bread");
+        jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox9ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jCheckBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 119, -1, -1));
+
+        jCheckBox10.setText("Onion Rings");
+        jCheckBox10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox10ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jCheckBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 147, -1, -1));
+
+        jCheckBox11.setText("Cheese Sticks");
+        jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox11ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jCheckBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 175, -1, -1));
+
+        jTextField18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField18.setText("00");
+        jPanel5.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 174, 31, -1));
+
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("-");
+        jLabel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 174, 14, 22));
+
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("-");
+        jLabel19.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 146, 14, 22));
+
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("-");
+        jLabel20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 118, 14, 22));
+
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("-");
+        jLabel21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 90, 14, 22));
+
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("-");
+        jLabel22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 62, 14, 22));
+
+        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField7.setText("00");
+        jPanel5.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 62, 31, -1));
+
+        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField8.setText("00");
+        jPanel5.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 90, 31, -1));
+
+        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField9.setText("00");
+        jPanel5.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 118, 31, -1));
+
+        jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField10.setText("00");
+        jPanel5.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 146, 31, -1));
+
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("+");
+        jLabel24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel24.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 174, 14, 22));
+
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("+");
+        jLabel25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel25.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 146, 14, 22));
+
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("+");
+        jLabel26.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel26.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 118, 14, 22));
+
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("+");
+        jLabel27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel27.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 90, 14, 22));
+
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setText("+");
+        jLabel28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel28.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 62, 14, 22));
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 310, 220));
+
+        jPanel6.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel42.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "BEVERAGES", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        jPanel6.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 240, 150));
+
+        jCheckBox13.setText("Cheese Cake");
+        jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox13ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jCheckBox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 38, -1, -1));
+
+        jCheckBox14.setText("Chocolate Cupcake");
+        jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox14ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jCheckBox14, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 68, -1, -1));
+
+        jCheckBox15.setText("Lava Cake");
+        jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox15ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jCheckBox15, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 98, -1, -1));
+
+        jCheckBox16.setText("Honey Waffle");
+        jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox16ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jCheckBox16, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 128, -1, -1));
+
+        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel32.setText("-");
+        jLabel32.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel6.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 128, 14, 22));
+
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel33.setText("-");
+        jLabel33.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel6.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 98, 14, 22));
+
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel34.setText("-");
+        jLabel34.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel6.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 68, 14, 22));
+
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setText("-");
+        jLabel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel6.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 38, 14, 22));
+
+        jTextField13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField13.setText("00");
+        jPanel6.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 38, 31, -1));
+
+        jTextField14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField14.setText("00");
+        jPanel6.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 68, 31, -1));
+
+        jTextField15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField15.setText("00");
+        jPanel6.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 98, 31, -1));
+
+        jTextField16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField16.setText("00");
+        jPanel6.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 128, 31, -1));
+
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel38.setText("+");
+        jLabel38.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel38.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel6.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 128, 14, 22));
+
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setText("+");
+        jLabel39.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel39.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel6.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 98, 14, 22));
+
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setText("+");
+        jLabel40.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel40.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel6.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 68, 14, 22));
+
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setText("+");
+        jLabel41.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel41.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel6.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 38, 14, 22));
+
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 270, 190));
+
+        jPanel7.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        burgerBoder.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        burgerBoder.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "BURGERS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        jPanel7.add(burgerBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 6, 280, 220));
+
+        jCheckBox1.setText("Chicken Burger");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 49, -1, -1));
+
+        jCheckBox2.setText("Beef Burger");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 77, -1, -1));
+
+        jCheckBox3.setText("Crispy Chicken Burger");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 105, -1, -1));
+
+        jCheckBox4.setText("Chicken Cheese Burger");
+        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox4ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 133, -1, -1));
+
+        jCheckBox5.setText("Creamy Mushroom Burger");
+        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox5ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 161, -1, -1));
+
+        jCheckBox6.setText("Grilled - Prawn Burger");
+        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox6ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jCheckBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 189, -1, -1));
+
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("-");
+        jLabel14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 189, 14, 22));
+
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("-");
+        jLabel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 161, 14, 22));
+
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("-");
+        jLabel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 133, 14, 22));
+
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("-");
+        jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 105, 14, 22));
+
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("-");
+        jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 77, 14, 22));
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("-");
+        jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 49, 14, 22));
+
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setText("00");
+        jPanel7.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 49, 31, -1));
+
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField2.setText("00");
+        jPanel7.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 77, 31, -1));
+
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField3.setText("00");
+        jPanel7.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 105, 31, -1));
+
+        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField4.setText("00");
+        jPanel7.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 133, 31, -1));
+
+        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField5.setText("00");
+        jPanel7.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 161, 31, -1));
+
+        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField6.setText("00");
+        jPanel7.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 189, 31, -1));
+
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("+");
+        jLabel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel15.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel7.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 189, 14, 22));
+
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("+");
+        jLabel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel13.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel7.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 161, 14, 22));
+
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("+");
+        jLabel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel11.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel7.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 133, 14, 22));
+
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("+");
+        jLabel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel9.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel7.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 105, 14, 22));
+
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("+");
+        jLabel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel7.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel7.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 77, 14, 22));
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("+");
+        jLabel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel5.setPreferredSize(new java.awt.Dimension(8, 16));
+        jPanel7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 49, 14, 22));
+
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 310, 240));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -977,6 +997,7 @@ public class Oders extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel back2;
+    private javax.swing.JLabel burgerBoder;
     private javax.swing.JLabel clear;
     private javax.swing.JLabel enter;
     private javax.swing.JLabel exit;
@@ -1000,7 +1021,6 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1008,12 +1028,14 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
@@ -1047,17 +1069,21 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
