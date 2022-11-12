@@ -14,6 +14,8 @@ public class Welcome extends javax.swing.JFrame {
      */
     public Welcome() {
         initComponents();
+        this.setLocationRelativeTo(this);
+        
     }
 
     /**
@@ -30,6 +32,7 @@ public class Welcome extends javax.swing.JFrame {
         Wallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mr. Burger");
 
         welcomePanel.setBackground(new java.awt.Color(204, 204, 204));
         welcomePanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -44,6 +47,7 @@ public class Welcome extends javax.swing.JFrame {
 
         Wallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wallpaper3.jpg"))); // NOI18N
         welcomePanel.add(Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        Wallpaper.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

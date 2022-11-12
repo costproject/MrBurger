@@ -18,6 +18,7 @@ public class Oders extends javax.swing.JFrame {
      */
     public Oders() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**
