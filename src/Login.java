@@ -49,10 +49,12 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 250, 290));
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextField1.setBorder(null);
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, 250, 40));
 
+        jPasswordField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPasswordField1.setMinimumSize(new java.awt.Dimension(64, 16));
         jPasswordField1.setPreferredSize(new java.awt.Dimension(64, 16));
