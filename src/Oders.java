@@ -248,7 +248,7 @@ public class Oders extends javax.swing.JFrame {
                 exitMouseExited(evt);
             }
         });
-        jPanel1.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 650, 100, 43));
+        jPanel1.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 650, 100, 43));
 
         back2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         back2.setText("SAVE");
@@ -265,7 +265,7 @@ public class Oders extends javax.swing.JFrame {
                 back2MouseExited(evt);
             }
         });
-        jPanel1.add(back2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 650, 100, 43));
+        jPanel1.add(back2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 650, 100, 43));
 
         clear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         clear.setText("CLEAR");
@@ -282,7 +282,7 @@ public class Oders extends javax.swing.JFrame {
                 clearMouseExited(evt);
             }
         });
-        jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 650, 100, 43));
+        jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 650, 100, 43));
 
         enter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         enter.setText("ENTER");
