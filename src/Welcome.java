@@ -45,7 +45,7 @@ public class Welcome extends javax.swing.JFrame {
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         welcomePanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 500, 150));
 
-        Wallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wallpaper3.jpg"))); // NOI18N
+        Wallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/backBlackground2.jpg"))); // NOI18N
         welcomePanel.add(Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         Wallpaper.getAccessibleContext().setAccessibleName("");
 
@@ -53,7 +53,7 @@ public class Welcome extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(welcomePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(welcomePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

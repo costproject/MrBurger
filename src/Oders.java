@@ -46,7 +46,6 @@ public class Oders extends javax.swing.JFrame {
         jTextField12 = new javax.swing.JTextField();
         jTextField24 = new javax.swing.JTextField();
         jTextField25 = new javax.swing.JTextField();
-        jLabel37 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         exit = new javax.swing.JLabel();
         back2 = new javax.swing.JLabel();
@@ -150,6 +149,8 @@ public class Oders extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1080, 720));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        grTotal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        grTotal.setForeground(new java.awt.Color(246, 166, 0));
         grTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         grTotal.setText("GRAND TOTAL");
         grTotal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -168,22 +169,33 @@ public class Oders extends javax.swing.JFrame {
         jPanel1.add(grTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 590, 100, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(246, 166, 0));
         jLabel3.setText("Cust_Id :");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 70, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(246, 166, 0));
         jLabel4.setText("Date :");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 6, 50, -1));
 
+        jTextField11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField11.setForeground(new java.awt.Color(246, 166, 0));
         jTextField11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField11.setText("00");
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, 50, 30));
+        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 540, 50, 30));
 
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 4, true));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTable1.setForeground(new java.awt.Color(246, 166, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -194,27 +206,38 @@ public class Oders extends javax.swing.JFrame {
             }
         ));
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setHeaderValue("Item_Id");
+            jTable1.getColumnModel().getColumn(1).setHeaderValue("Item_Name");
+            jTable1.getColumnModel().getColumn(2).setHeaderValue("Price");
+            jTable1.getColumnModel().getColumn(3).setHeaderValue("Quantity");
+            jTable1.getColumnModel().getColumn(4).setHeaderValue("Amount");
+        }
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 351, 290));
 
         jLabel17.setFont(new java.awt.Font("STXingkai", 1, 48)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(246, 166, 0));
         jLabel17.setText("Mr. Burger");
         jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 220, 90));
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logo 3.png"))); // NOI18N
         jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 110, -1));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(246, 166, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("GRAND TOTAL :");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 150, -1));
 
-        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(246, 166, 0));
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel31.setText("SUB TOTAL :");
         jPanel2.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 140, -1));
 
-        jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel36.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(246, 166, 0));
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel36.setText("DISCOUNT :");
         jPanel2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, 140, -1));
@@ -222,21 +245,19 @@ public class Oders extends javax.swing.JFrame {
         jPanel2.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 90, -1));
         jPanel2.add(jTextField25, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, 90, -1));
 
-        jLabel37.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel37.setText("COME AGAIN!!");
-        jPanel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 530, 170, 40));
-
-        jLabel43.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel43.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(246, 166, 0));
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel43.setText("THANK YOU");
-        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 510, 110, 40));
+        jLabel43.setText("THANK YOU COME AGAIN!!");
+        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, 230, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 60, 430, 570));
 
+        exit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        exit.setForeground(new java.awt.Color(246, 166, 0));
         exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         exit.setText("EXIT");
-        exit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        exit.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -251,9 +272,11 @@ public class Oders extends javax.swing.JFrame {
         });
         jPanel1.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 650, 100, 43));
 
+        back2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        back2.setForeground(new java.awt.Color(246, 166, 0));
         back2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         back2.setText("SAVE");
-        back2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        back2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         back2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         back2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -268,9 +291,11 @@ public class Oders extends javax.swing.JFrame {
         });
         jPanel1.add(back2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 650, 100, 43));
 
+        clear.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        clear.setForeground(new java.awt.Color(246, 166, 0));
         clear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         clear.setText("CLEAR");
-        clear.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        clear.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         clear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         clear.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -285,6 +310,8 @@ public class Oders extends javax.swing.JFrame {
         });
         jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 650, 100, 43));
 
+        enter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        enter.setForeground(new java.awt.Color(246, 166, 0));
         enter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         enter.setText("ENTER");
         enter.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -300,13 +327,19 @@ public class Oders extends javax.swing.JFrame {
                 enterMouseExited(evt);
             }
         });
-        jPanel1.add(enter, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 520, 70, 30));
+        jPanel1.add(enter, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 540, 70, 30));
+
+        jTextField17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField17.setForeground(new java.awt.Color(246, 166, 0));
         jPanel1.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 590, 100, 30));
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(246, 166, 0));
         jLabel30.setText("DISCOUNT");
-        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 120, 30));
+        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 120, 30));
 
+        reset2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        reset2.setForeground(new java.awt.Color(246, 166, 0));
         reset2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         reset2.setText("RESET");
         reset2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -360,7 +393,7 @@ public class Oders extends javax.swing.JFrame {
         });
         DessertBoder.add(jCheckBox20, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 86, -1, -1));
 
-        jCheckBox21.setText("Vanilla Milkshake");
+        jCheckBox21.setText("Faluda");
         jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox21ActionPerformed(evt);
@@ -440,7 +473,7 @@ public class Oders extends javax.swing.JFrame {
         jLabel29.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DESSERTS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
         DessertBoder.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 240, 150));
 
-        jPanel1.add(DessertBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 280, 210));
+        jPanel1.add(DessertBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 280, 210));
 
         BeveragesBoder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -540,7 +573,7 @@ public class Oders extends javax.swing.JFrame {
         jLabel42.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "BEVERAGES", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
         BeveragesBoder.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 240, 160));
 
-        jPanel1.add(BeveragesBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 280, 230));
+        jPanel1.add(BeveragesBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 280, 230));
 
         BurgerBoder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -686,7 +719,7 @@ public class Oders extends javax.swing.JFrame {
         burgerBoder.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "BURGERS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
         BurgerBoder.add(burgerBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 280, 220));
 
-        jPanel1.add(BurgerBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 320, 240));
+        jPanel1.add(BurgerBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 320, 240));
 
         AppetizerBoder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -825,9 +858,10 @@ public class Oders extends javax.swing.JFrame {
                 .addComponent(AppetizerBoder, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 590, 440));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 590, 440));
 
-        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/background-4.jpg"))); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(246, 166, 0));
+        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wallpaperBlack3.jpg"))); // NOI18N
         jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 720));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1108,7 +1142,6 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;

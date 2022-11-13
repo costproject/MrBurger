@@ -70,14 +70,17 @@ public class Admin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Home");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        stockManagement1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        stockManagement1.setForeground(new java.awt.Color(246, 166, 0));
         stockManagement1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stockManagement1.setText("STOCK");
-        stockManagement1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        stockManagement1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(246, 166, 0), 2));
         stockManagement1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         stockManagement1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -85,11 +88,16 @@ public class Admin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(stockManagement1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 133, 43));
-        jPanel1.add(cust_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 130, -1));
 
+        cust_id.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        cust_id.setForeground(new java.awt.Color(246, 166, 0));
+        jPanel1.add(cust_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 130, -1));
+
+        order1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        order1.setForeground(new java.awt.Color(246, 166, 0));
         order1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         order1.setText("PLACE ORDER");
-        order1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        order1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(246, 166, 0), 2, true));
         order1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         order1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -98,12 +106,16 @@ public class Admin extends javax.swing.JFrame {
         });
         jPanel1.add(order1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 133, 43));
 
-        jLabel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CUST_ID", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(246, 166, 0));
+        jLabel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CUST_ID", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(246, 166, 0))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 150, 120));
 
+        logout.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        logout.setForeground(new java.awt.Color(246, 166, 0));
         logout.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logout.setText("LOGOUT");
-        logout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        logout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(246, 166, 0), 2));
         logout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -117,6 +129,9 @@ public class Admin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 18, 133, 43));
+
+        jTabbedPane1.setForeground(new java.awt.Color(246, 166, 0));
+        jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -253,9 +268,10 @@ public class Admin extends javax.swing.JFrame {
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
         stockManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        stockManagement.setForeground(new java.awt.Color(246, 166, 0));
         stockManagement.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stockManagement.setText("FOOD MENU");
-        stockManagement.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        stockManagement.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(246, 166, 0), 2, true));
         stockManagement.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         stockManagement.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -264,20 +280,20 @@ public class Admin extends javax.swing.JFrame {
         });
         jPanel2.add(stockManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 180, 160));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/background-4.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wallpaperBlack3.jpg"))); // NOI18N
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 180, 160));
 
         jTabbedPane1.addTab("MENU & CUSTOMER REGISTRATION", jPanel2);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Order_Id", "Cust_Id", "Date", "Time", "Discount", "Total Price"
+                "Order_Id", "Cust_Id", "Date", "Time", "Sub_Total", "Discount", "Grand_Total"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
@@ -335,8 +351,10 @@ public class Admin extends javax.swing.JFrame {
 
         jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 18, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/background-4.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 710));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(246, 166, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wallpaperBlack3.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 710));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
