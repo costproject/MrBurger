@@ -7,6 +7,8 @@
  *
  * @author Sandun Siwantha
  */
+import java.sql.*;
+import javax.swing.*;
 public class Login extends javax.swing.JFrame {
 
     /**
@@ -27,8 +29,8 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         logo = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        un = new javax.swing.JTextField();
+        pw = new javax.swing.JPasswordField();
         sign = new javax.swing.JLabel();
         user = new javax.swing.JLabel();
         pass = new javax.swing.JLabel();
@@ -51,16 +53,16 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 160, 170));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField1.setBorder(null);
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 250, 40));
+        un.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        un.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        un.setBorder(null);
+        getContentPane().add(un, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 250, 40));
 
-        jPasswordField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPasswordField1.setMinimumSize(new java.awt.Dimension(64, 16));
-        jPasswordField1.setPreferredSize(new java.awt.Dimension(64, 16));
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 430, 250, 40));
+        pw.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        pw.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        pw.setMinimumSize(new java.awt.Dimension(64, 16));
+        pw.setPreferredSize(new java.awt.Dimension(64, 16));
+        getContentPane().add(pw, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 430, 250, 40));
 
         sign.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logo 3.png"))); // NOI18N
         sign.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -107,9 +109,37 @@ public class Login extends javax.swing.JFrame {
 
     private void signMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signMouseClicked
         // TODO add your handling code here:
-        Admin ad = new Admin();
-        ad.setVisible(true);
-        this.dispose();
+        Admin ad = new Admin();    
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "select * from login where UserName=? and Password=?";
+            PreparedStatement ps = con.prepareStatement(s);
+            ps.setString(1, un.getText());
+            ps.setString(2, pw.getText());
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                 //JOptionPane.showMessageDialog(this,"Login Succesfully");
+                ad.setVisible(true);
+                this.dispose();
+            }
+            else {
+                JOptionPane.showMessageDialog(this,"Login Failed");
+                un.setText("");
+                pw.setText("");
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+
     }//GEN-LAST:event_signMouseClicked
 
     /**
@@ -151,11 +181,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel pass;
+    private javax.swing.JPasswordField pw;
     private javax.swing.JLabel sign;
+    private javax.swing.JTextField un;
     private javax.swing.JLabel user;
     // End of variables declaration//GEN-END:variables
 }

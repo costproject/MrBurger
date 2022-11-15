@@ -1,4 +1,4 @@
-#DROP DATABASE MrBurger;
+DROP DATABASE MrBurger;
 CREATE DATABASE MrBurger;
 USE MrBurger;
 
@@ -8,6 +8,12 @@ CREATE TABLE Items 	(
                     Item_Name varchar(30),
                     Price int,
                     Quantity int
+					);
+                    
+#create login
+CREATE TABLE login 	(
+					UserName varchar(10) NOT NULL PRIMARY KEY,
+                    Password varchar(10)
 					);
 
 #Create Customer
@@ -46,6 +52,10 @@ CREATE TABLE Ordered_Items 	(
 #DESCRIBE Items;
 #DESCRIBE Orders;
 #DESCRIBE Ordered_Items;
+
+#Insert Login Info
+INSERT INTO Login Values 	('admin','admin'),
+							('','');
 
 #Insert Burger Details
 INSERT INTO Items(Item_Id, Item_Name, Price, Quantity)
