@@ -50,7 +50,6 @@ public class Oders extends javax.swing.JFrame {
         exit = new javax.swing.JLabel();
         back2 = new javax.swing.JLabel();
         clear = new javax.swing.JLabel();
-        enter = new javax.swing.JLabel();
         jTextField17 = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
         reset2 = new javax.swing.JLabel();
@@ -214,7 +213,7 @@ public class Oders extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(4).setHeaderValue("Amount");
         }
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 351, 290));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 400, 290));
 
         jLabel17.setFont(new java.awt.Font("STXingkai", 1, 48)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(246, 166, 0));
@@ -249,9 +248,9 @@ public class Oders extends javax.swing.JFrame {
         jLabel43.setForeground(new java.awt.Color(246, 166, 0));
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel43.setText("THANK YOU COME AGAIN!!");
-        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, 230, 40));
+        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 520, 230, 40));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 60, 430, 570));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, 440, 570));
 
         exit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         exit.setForeground(new java.awt.Color(246, 166, 0));
@@ -309,25 +308,6 @@ public class Oders extends javax.swing.JFrame {
             }
         });
         jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 650, 100, 43));
-
-        enter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        enter.setForeground(new java.awt.Color(246, 166, 0));
-        enter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        enter.setText("ENTER");
-        enter.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        enter.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        enter.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                enterMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                enterMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                enterMouseExited(evt);
-            }
-        });
-        jPanel1.add(enter, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 540, 70, 30));
 
         jTextField17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField17.setForeground(new java.awt.Color(246, 166, 0));
@@ -427,6 +407,11 @@ public class Oders extends javax.swing.JFrame {
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel48.setText("-");
         jLabel48.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel48.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel48MouseClicked(evt);
+            }
+        });
         DessertBoder.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 57, 14, 22));
 
         jTextField19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -578,6 +563,11 @@ public class Oders extends javax.swing.JFrame {
         BurgerBoder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jCheckBox1.setText("Chicken Burger");
+        jCheckBox1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jCheckBox1MouseClicked(evt);
+            }
+        });
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox1ActionPerformed(evt);
@@ -628,31 +618,61 @@ public class Oders extends javax.swing.JFrame {
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("-");
         jLabel14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+        });
         BurgerBoder.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 189, 14, 22));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("-");
         jLabel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
         BurgerBoder.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 161, 14, 22));
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("-");
         jLabel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
         BurgerBoder.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 133, 14, 22));
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("-");
         jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
         BurgerBoder.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 105, 14, 22));
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("-");
         jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         BurgerBoder.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 77, 14, 22));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("-");
         jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         BurgerBoder.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 49, 14, 22));
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -770,26 +790,51 @@ public class Oders extends javax.swing.JFrame {
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("-");
         jLabel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 174, 14, 22));
 
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("-");
         jLabel19.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 146, 14, 22));
 
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("-");
         jLabel20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel20MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 118, 14, 22));
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("-");
         jLabel21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel21MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 90, 14, 22));
 
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("-");
         jLabel22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel22MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 62, 14, 22));
 
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -951,7 +996,7 @@ public class Oders extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:    
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void grTotalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grTotalMouseExited
@@ -964,6 +1009,13 @@ public class Oders extends javax.swing.JFrame {
 
     private void grTotalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grTotalMouseClicked
         // TODO add your handling code here:
+        Double grTotal=0.0;
+        Double total=Double.parseDouble(jTextField23.getText());
+        double x = Double.parseDouble(jTextField11.getText());
+        grTotal=total-(total*x/100);
+        jTextField17.setText(Double.toString(grTotal));
+        grTotal=Double.parseDouble(jTextField17.getText());
+        
     }//GEN-LAST:event_grTotalMouseClicked
 
     private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
@@ -1005,20 +1057,50 @@ public class Oders extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_clearMouseExited
 
-    private void enterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enterMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_enterMouseClicked
-
-    private void enterMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enterMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_enterMouseEntered
-
-    private void enterMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enterMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_enterMouseExited
-
     private void reset2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset2MouseClicked
-        // TODO add your handling code here:
+       jCheckBox1.setSelected(false);
+       jCheckBox2.setSelected(false);
+       jCheckBox3.setSelected(false);
+       jCheckBox4.setSelected(false);
+       jCheckBox5.setSelected(false);
+       jCheckBox6.setSelected(false);
+       jCheckBox7.setSelected(false);
+       jCheckBox8.setSelected(false);
+       jCheckBox9.setSelected(false);
+       jCheckBox10.setSelected(false);
+       jCheckBox11.setSelected(false);
+       jCheckBox13.setSelected(false);
+       jCheckBox14.setSelected(false);
+       jCheckBox15.setSelected(false);
+       jCheckBox16.setSelected(false);
+       jCheckBox19.setSelected(false);
+       jCheckBox20.setSelected(false);
+       jCheckBox21.setSelected(false);
+       jCheckBox22.setSelected(false);
+      
+       jTextField1.setText("00");
+       jTextField2.setText("00");
+       jTextField3.setText("00");
+       jTextField4.setText("00");
+       jTextField5.setText("00");
+       jTextField6.setText("00");
+       jTextField7.setText("00");
+       jTextField8.setText("00");
+       jTextField9.setText("00");
+       jTextField10.setText("00");
+       jTextField13.setText("00");
+       jTextField14.setText("00");
+       jTextField15.setText("00");
+       jTextField16.setText("00");
+       jTextField18.setText("00");
+       jTextField19.setText("00");
+       jTextField20.setText("00");
+       jTextField21.setText("00");
+       jTextField23.setText(" ");
+       jTextField11.setText("00");
+       jTextField17.setText(" ");
+       jTextField22.setText("00");
+    
     }//GEN-LAST:event_reset2MouseClicked
 
     private void reset2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset2MouseEntered
@@ -1031,6 +1113,67 @@ public class Oders extends javax.swing.JFrame {
 
     private void totalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_totalMouseClicked
         // TODO add your handling code here:
+        double total=0;
+        if(jCheckBox1.isSelected()){
+            total=total+500;
+        }
+        if(jCheckBox2.isSelected()){
+            total=total+600;
+        }
+        if(jCheckBox3.isSelected()){
+            total=total+700;
+        }
+        if(jCheckBox4.isSelected()){
+            total=total+700;
+        }
+        if(jCheckBox5.isSelected()){
+            total=total+700;
+        }
+        if(jCheckBox6.isSelected()){
+            total=total+800;
+        }
+        if(jCheckBox7.isSelected()){
+            total=total+200;
+        }
+        if(jCheckBox8.isSelected()){
+            total=total+250;
+        }
+        if(jCheckBox9.isSelected()){
+            total=total+200;
+        }
+        if(jCheckBox10.isSelected()){
+            total=total+100;
+        }
+        if(jCheckBox11.isSelected()){
+            total=total+150;
+        }
+        if(jCheckBox13.isSelected()){
+            total=total+550;
+        }
+        if(jCheckBox14.isSelected()){
+            total=total+200;
+        }
+        if(jCheckBox15.isSelected()){
+            total=total+540;
+        }
+        if(jCheckBox16.isSelected()){
+            total=total+740;
+        }
+        if(jCheckBox19.isSelected()){
+            total=total+200;
+        }
+        if(jCheckBox20.isSelected()){
+            total=total+250;
+        }
+        if(jCheckBox21.isSelected()){
+            total=total+250;
+        }
+        if(jCheckBox22.isSelected()){
+            total=total+150;
+        }
+        jTextField23.setText(Double.toString(total));
+        total=Double.parseDouble(jTextField23.getText());
+        
     }//GEN-LAST:event_totalMouseClicked
 
     private void totalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_totalMouseEntered
@@ -1040,6 +1183,75 @@ public class Oders extends javax.swing.JFrame {
     private void totalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_totalMouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_totalMouseExited
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField1.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField1.setText(Double.toString(p));
+        }
+        
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jCheckBox1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox1MouseClicked
+        // TODO add your handling code here:
+        double p=1;
+            jTextField1.setText(Double.toString(p));
+    }//GEN-LAST:event_jCheckBox1MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // TODO add your handling code here:
+  
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        // TODO add your handling code here:
+ 
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
+        // TODO add your handling code h
+    }//GEN-LAST:event_jLabel22MouseClicked
+
+    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
+        // TODO add your handling code here:
+  
+    }//GEN-LAST:event_jLabel21MouseClicked
+
+    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        // TODO add your handli
+    }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_jLabel18MouseClicked
+
+    private void jLabel48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseClicked
+
+    }//GEN-LAST:event_jLabel48MouseClicked
 
     public void setColor(JLabel p){
         p.setBackground(new Color(205,200,35));
@@ -1090,7 +1302,6 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JLabel back2;
     private javax.swing.JLabel burgerBoder;
     private javax.swing.JLabel clear;
-    private javax.swing.JLabel enter;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel grTotal;
     private javax.swing.JCheckBox jCheckBox1;
