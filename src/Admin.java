@@ -20,21 +20,82 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class Admin extends javax.swing.JFrame {
-
     Connection con;
-    
     public Admin() {
         initComponents();
         this.setLocationRelativeTo(this);
-        
-        String url="jdbc:mysql://localhost/mrburger";
-        String user="root";
-        String pass="";
-        try{
-            con = DriverManager.getConnection(url,user,pass);
-        }catch(Exception ex){
-            System.out.println("Error : " + ex.getMessage());
+
+//Burger        
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "SELECT * FROM items WHERE Item_Id LIKE 'BUR%';";
+            PreparedStatement ps = con.prepareStatement(s);
+            ResultSet rs = ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)tblBur.getModel();
+            //model.setRowCount(0);
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(4)});
+            }
         }
+        catch(Exception e){
+            System.out.println(e);
+        }
+
+//Appatizers        
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "SELECT * FROM items WHERE Item_Id LIKE 'APP%';";
+            PreparedStatement ps = con.prepareStatement(s);
+            ResultSet rs = ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)tblApp.getModel();
+            //model.setRowCount(0);
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(4)});
+            }
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+
+//Beverage table
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "SELECT * FROM items WHERE Item_Id LIKE 'BEV%';";
+            PreparedStatement ps = con.prepareStatement(s);
+            ResultSet rs = ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)tblBev.getModel();
+            //model.setRowCount(0);
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(4)});
+            }
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        
+//Dessert table
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "SELECT * FROM items WHERE Item_Id LIKE 'DES%';";
+            PreparedStatement ps = con.prepareStatement(s);
+            ResultSet rs = ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)tblDes.getModel();
+            //model.setRowCount(0);
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(4)});
+            }
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+
+
+
+
     }
 
     /**
@@ -66,7 +127,6 @@ public class Admin extends javax.swing.JFrame {
         FLname = new javax.swing.JTextField();
         MobNumber = new javax.swing.JTextField();
         LUser = new javax.swing.JLabel();
-        boderReg = new javax.swing.JLabel();
         LUser1 = new javax.swing.JLabel();
         email1 = new javax.swing.JTextField();
         LUser2 = new javax.swing.JLabel();
@@ -75,6 +135,8 @@ public class Admin extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        boderReg = new javax.swing.JLabel();
         stockManagement = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanelOrd = new javax.swing.JPanel();
@@ -163,10 +225,7 @@ public class Admin extends javax.swing.JFrame {
 
         tblDes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Item_Id", "Item_Name", "Quantity"
@@ -183,10 +242,7 @@ public class Admin extends javax.swing.JFrame {
 
         tblBur.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Item_Id", "Item_Name", "Quantity"
@@ -212,10 +268,7 @@ public class Admin extends javax.swing.JFrame {
 
         tblApp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Item_Id", "Item_Name", "Quantity"
@@ -232,10 +285,7 @@ public class Admin extends javax.swing.JFrame {
 
         tblBev.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Item_Id", "Item_Name", "Quantity"
@@ -265,11 +315,6 @@ public class Admin extends javax.swing.JFrame {
         LUser.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         LUser.setText("Mobile Number :");
         jPanelMenu.add(LUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
-
-        boderReg.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        boderReg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        boderReg.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MEMBERSHIP", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
-        jPanelMenu.add(boderReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 320, 210));
 
         LUser1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         LUser1.setText("First & Last Name :");
@@ -317,6 +362,20 @@ public class Admin extends javax.swing.JFrame {
         jLabel7.setText("Beverages");
         jPanelMenu.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanelMenu.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 130, 40));
+
+        boderReg.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        boderReg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        boderReg.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MEMBERSHIP", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
+        boderReg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boderRegMouseClicked(evt);
+            }
+        });
+        jPanelMenu.add(boderReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 320, 270));
+
         stockManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         stockManagement.setForeground(new java.awt.Color(246, 166, 0));
         stockManagement.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -343,10 +402,7 @@ public class Admin extends javax.swing.JFrame {
 
         tblOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Order_Id", "Cust_Id", "Date", "Time", "Sub_Total", "Discount", "Grand_Total"
@@ -381,10 +437,7 @@ public class Admin extends javax.swing.JFrame {
 
         tblCustomer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Cust_Id", "Cust_Name", "Email", "Mobile_No"
@@ -427,7 +480,7 @@ public class Admin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -463,35 +516,80 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_stockManagementMouseClicked
 
     private void btnOKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOKMouseClicked
-        String Cust_Name = FLname.getText();
-        String Email = email1.getText();
-        String Mobile_No = MobNumber.getText();
-        
-        if(Cust_Name.isEmpty()||Email.isEmpty()||Mobile_No.isEmpty()){
-            JOptionPane.showMessageDialog(this, 
-                    "Please enter all fields", 
-                    "Try again", 
-                    JOptionPane.ERROR_MESSAGE);
+        String mobil,email,name;        
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "INSERT INTO customer(Cust_Name,Email,Mobile_No) VALUES (?,?,?);";
+            PreparedStatement ps = con.prepareStatement(s);
             
-        }else{
+            name = FLname.getText();
+            email = email1.getText();
+            mobil = MobNumber.getText();
+            
+            ps.setString(1,name);
+            ps.setString(2,email);
+            ps.setString(3,mobil);
+            ps.executeUpdate();  
+            JOptionPane.showMessageDialog(this, "Registered Successfully!");
+            
+            
+            //customers table
+        try {
+            PreparedStatement pst = con.prepareStatement("SELECT * FROM customer;");
+            ResultSet rst = pst.executeQuery();
             DefaultTableModel model = (DefaultTableModel)tblCustomer.getModel();
-            model.addRow(new Object[]{Cust_Name, Email, Mobile_No});
+            model.setRowCount(0);
+            while(rst.next()){
+                model.addRow(new String[]{rst.getString(1), rst.getString(2), rst.getString(3), rst.getString(4)});
+            }
         }
+        catch(Exception e){
+            System.out.println(e);
+        }
+            
+            
+            
+            //this.dispose();
+           // new Admin().setVisible(true);
+            int rowcount=tblCustomer.getRowCount()-1;
+            String x = tblCustomer.getValueAt(rowcount, 0).toString();
+            String text = "Cust_Id : "+ x;           
+            jLabel9.setText(text);
+               
+            //Oders od = new Oders();
+            //od.setVisible(true);
+            //this.dispose();
+        }
+        catch(Exception e){
+            System.out.println(e);
+    }                                  
+
+            /**try {
+                String sql = "SELECT Cust_Id FROM customer;";
+                PreparedStatement pst = con.prepareStatement(sql);
+                ResultSet rst = pst.executeQuery();
+                int x=0;
+                while(rst.next()){
+                    x = rst.getInt(1);
+                }
+                String text = "Cust_Id : "+ Integer.toString(x);
+                jLabel9.setText(text);
+            }
+            catch(Exception e){
+                System.out.println(e);
+            }*/  
         
-        
-        Oders od = new Oders();
-        od.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_btnOKMouseClicked
 
     private void order1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_order1MouseClicked
-       String msg=cust_id.getText();
+      String msg=cust_id.getText();
         new Oders(msg).setVisible(true);
         setVisible(false);
      
 // TODO add your handling code here:
-        /*Oders od = new Oders();
-        od.setVisible(true);**/
+        //Oders od = new Oders();
+        ///od.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_order1MouseClicked
 
@@ -524,35 +622,38 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelOrdMouseClicked
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
-        String sql1="SELECT * FROM orders";
-        try{
-            PreparedStatement pst = con.prepareStatement(sql1);
-            ResultSet rs = pst.executeQuery();
-            DefaultTableModel model = (DefaultTableModel)tblOrders.getModel();
-            model.setRowCount(0);
-            while(rs.next()){
-                model.addRow(new String[]{rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7)});
-            }
-            
-            
-        }catch(Exception ex){
-            System.out.println("Error : " +ex.getMessage());
-        }
-        
-        String sql2="SELECT * FROM customer";
-        try{
-            PreparedStatement pst = con.prepareStatement(sql2);
-            ResultSet rs = pst.executeQuery();
+//customers table
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "SELECT * FROM customer;";
+            PreparedStatement ps = con.prepareStatement(s);
+            ResultSet rs = ps.executeQuery();
             DefaultTableModel model = (DefaultTableModel)tblCustomer.getModel();
             model.setRowCount(0);
             while(rs.next()){
                 model.addRow(new String[]{rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)});
             }
-            
-            
-        }catch(Exception ex){
-            System.out.println("Error : " +ex.getMessage());
-            
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        
+//Orders table
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "SELECT * FROM orders;";
+            PreparedStatement ps = con.prepareStatement(s);
+            ResultSet rs = ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)tblOrders.getModel();
+            model.setRowCount(0);
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7)});
+            }
+        }
+        catch(Exception e){
+            System.out.println(e);
         }
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
@@ -563,6 +664,13 @@ public class Admin extends javax.swing.JFrame {
     private void tblCustomerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCustomerMouseClicked
        
     }//GEN-LAST:event_tblCustomerMouseClicked
+
+    private void boderRegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boderRegMouseClicked
+        // TODO add your handling code here
+      //  Oders od = new Oders();
+        //od.setVisible(true);
+        //this.dispose();
+    }//GEN-LAST:event_boderRegMouseClicked
 
     public void setColor(JLabel p){
         p.setBackground(new Color(205,200,35));
@@ -622,6 +730,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelCust;
     private javax.swing.JPanel jPanelMenu;

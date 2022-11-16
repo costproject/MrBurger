@@ -360,6 +360,34 @@ public class StockManagement extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_backMouseClicked
 
+    int QuantityItem(String y){
+        int quant=0;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String sq = "select * from items WHERE Item_Id = '"+y+"';";
+            PreparedStatement pst = conn.prepareStatement(sq);
+            System.out.println("before quary");
+            ResultSet rst = pst.executeQuery();
+            System.out.println("after quary");
+            
+            DefaultTableModel model = (DefaultTableModel)item.getModel();
+            model.setRowCount(0);
+            
+            while(rst.next()){
+                model.addRow(new String[]{rst.getString(1),rst.getString(2),rst.getString(3),rst.getString(4)});
+            }
+            
+            quant = Integer.parseInt(model.getValueAt(0,3).toString());
+            System.out.println("quantity got"+quant);
+            
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        return quant;
+    }
+    
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
         try {
@@ -388,7 +416,7 @@ public class StockManagement extends javax.swing.JFrame {
             model.setRowCount(0);
             
             while(rs.next()){
-                model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3)});
+                model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});
             }
         }catch(Exception e){
             System.out.println(e);
@@ -416,7 +444,7 @@ public class StockManagement extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
 
             String s = "UPDATE customer SET Cust_Name = ? ,Email = ?, Mobile_No = ? WHERE Cust_Id = ?";
-            System.out.println("query done");
+//            System.out.println("query done");
             PreparedStatement ps = con.prepareStatement(s);
             String Name = jTextField20.getText();
             String email = jTextField26.getText();
@@ -457,7 +485,7 @@ public class StockManagement extends javax.swing.JFrame {
             ps.executeUpdate();  
             
             
-                JOptionPane.showMessageDialog(this, "oyeee we done");
+                JOptionPane.showMessageDialog(this, "Inserted Successfully!");
                 //model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});
             
         }catch(Exception e){

@@ -49,7 +49,7 @@ public class Oders extends javax.swing.JFrame {
         
         
         
-        
+  //counting previous orders and get newest oderId      
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
@@ -1250,7 +1250,7 @@ public class Oders extends javax.swing.JFrame {
     
     private void grTotalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grTotalMouseClicked
         // TODO add your handling code here:
-        int grTotal=0;  //sandun changed int to int
+        int grTotal=0; 
         int total=Integer.parseInt(jTextField23.getText());
         int x = Integer.parseInt(jTextField11.getText());
         int discount = total*x/100;
@@ -1279,7 +1279,7 @@ public class Oders extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMouseExited
 
     private void back2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back2MouseClicked
-        // TODO add your handling code here:
+        //Insert data into orders
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
@@ -1291,8 +1291,7 @@ public class Oders extends javax.swing.JFrame {
             int SubTotal = Integer.parseInt(jTextField24.getText());
             int Discount1 = Integer.parseInt(jTextField25.getText());
             int GrandTotal = Integer.parseInt(jTextField12.getText());
-            
-            
+
             ps.setInt(1,CustId);
             ps.setString(2,Date1);
             ps.setString(3,Time1);
@@ -1300,7 +1299,6 @@ public class Oders extends javax.swing.JFrame {
             ps.setInt(5,Discount1);
             ps.setInt(6,GrandTotal);
             ps.executeUpdate();  
-            JOptionPane.showMessageDialog(this, "Inserted Successfully!");
         }
         catch(Exception e){
             System.out.println(e);
@@ -1312,18 +1310,18 @@ public class Oders extends javax.swing.JFrame {
         
         
         
-        
-        try {
+   //Insert data to ordered items     
+       try {
             DefaultTableModel tb=(DefaultTableModel) BILL_TABLE_.getModel();
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
             for (int i = 0; i < BILL_TABLE_.getRowCount(); i++) {
                 String s = "INSERT INTO ordered_items(Order_Id,Item_Id,Price,Quantity,Amount) VALUES (?,?,?,?,?);";
-                int OrdId = Integer.parseInt(cust.getText());
-                String itemid = date1.getText();
-                int Price = Integer.parseInt(jTextField24.getText());
-                int Quantity = Integer.parseInt(jTextField25.getText());
-                int Amount = Integer.parseInt(jTextField12.getText()); 
+                int OrdId = Integer.parseInt(jLabel4.getText());
+                String itemid = BILL_TABLE_.getValueAt(i, 0).toString();
+                int Price = Integer.parseInt(BILL_TABLE_.getValueAt(i, 2).toString());
+                int Quantity =Integer.parseInt(BILL_TABLE_.getValueAt(i, 3).toString());
+                int Amount = Integer.parseInt(BILL_TABLE_.getValueAt(i, 4).toString()); 
                 PreparedStatement ps = con.prepareStatement(s);
             ps.setInt(1,OrdId);
             ps.setString(2,itemid);
@@ -1338,6 +1336,37 @@ public class Oders extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e);
     }                    
+       //update quantity from stock
+        try
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            DefaultTableModel t1=(DefaultTableModel) BILL_TABLE_.getModel();
+            StockManagement stm = new StockManagement();
+            int q=1;
+            int k=t1.getRowCount();
+            for (int j = 0; j < k; j++) {
+                q= stm.QuantityItem(id[j])-qn[j];
+                System.out.println("id"+id[j]);
+                System.out.println(""+q);
+                PreparedStatement psta = conn.prepareStatement("UPDATE items SET Quantity = "+q+" WHERE Item_id='"+id[j]+"';");
+                psta.executeUpdate(); 
+            }   
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
         
     }
     private void back2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back2MouseEntered
@@ -1415,12 +1444,12 @@ public class Oders extends javax.swing.JFrame {
     private void reset2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset2MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_reset2MouseExited
-
-    private void totalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_totalMouseClicked
-        // TODO add your handling code here:
-        int total=0;
         String[] id = new String[19];
         int[] qn = new int[19];
+    private void totalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_totalMouseClicked
+        // cheacking check box and assign quantitiy and id 
+        int total=0;
+
         int i =0;
         if(jCheckBox1.isSelected()){
             int p;
