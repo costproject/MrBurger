@@ -401,16 +401,31 @@ public class Oders extends javax.swing.JFrame {
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel45.setText("-");
         jLabel45.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel45.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel45MouseClicked(evt);
+            }
+        });
         DessertBoder.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 141, 14, 22));
 
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel46.setText("-");
         jLabel46.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel46MouseClicked(evt);
+            }
+        });
         DessertBoder.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 113, 14, 22));
 
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel47.setText("-");
         jLabel47.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel47.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel47MouseClicked(evt);
+            }
+        });
         DessertBoder.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 85, 14, 22));
 
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -506,21 +521,41 @@ public class Oders extends javax.swing.JFrame {
         jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel32.setText("-");
         jLabel32.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel32.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel32MouseClicked(evt);
+            }
+        });
         BeveragesBoder.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 128, 14, 22));
 
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel33.setText("-");
         jLabel33.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel33.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel33MouseClicked(evt);
+            }
+        });
         BeveragesBoder.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 98, 14, 22));
 
         jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel34.setText("-");
         jLabel34.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel34.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel34MouseClicked(evt);
+            }
+        });
         BeveragesBoder.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 68, 14, 22));
 
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel35.setText("-");
         jLabel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel35.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel35MouseClicked(evt);
+            }
+        });
         BeveragesBoder.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 38, 14, 22));
 
         jTextField13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -903,6 +938,11 @@ public class Oders extends javax.swing.JFrame {
 
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField7.setText("00");
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
         AppetizerBoder.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 62, 31, -1));
 
         jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -989,54 +1029,80 @@ public class Oders extends javax.swing.JFrame {
 
     private void jCheckBox22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox22ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField22.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox22ActionPerformed
 
     private void jCheckBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox21ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField21.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox21ActionPerformed
 
     private void jCheckBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox20ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField20.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox20ActionPerformed
 
     private void jCheckBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox19ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField19.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox19ActionPerformed
 
     private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField16.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox16ActionPerformed
 
     private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField15.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox15ActionPerformed
 
     private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField14.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox14ActionPerformed
 
     private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField13.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox13ActionPerformed
 
     private void jCheckBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox11ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField18.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox11ActionPerformed
 
     private void jCheckBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox10ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField10.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox10ActionPerformed
 
     private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField9.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox9ActionPerformed
 
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField8.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox8ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
         // TODO add your handling code here:
+         double p=1;
+            jTextField7.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
@@ -1444,28 +1510,69 @@ public class Oders extends javax.swing.JFrame {
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
         // TODO add your handling code h
+        double p;
+        p=Double.parseDouble(jTextField7.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField7.setText(Double.toString(p));
+        }
+
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
         // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField8.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField8.setText(Double.toString(p));
+        }
+
   
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
         // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField9.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField9.setText(Double.toString(p));
+        }
+
        
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         // TODO add your handli
+        double p;
+        p=Double.parseDouble(jTextField10.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField10.setText(Double.toString(p));
+        }
+
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField18.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField18.setText(Double.toString(p));
+        }
+
        
     }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jLabel48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseClicked
+        double p;
+        p=Double.parseDouble(jTextField19.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField19.setText(Double.toString(p));
+        }
 
     }//GEN-LAST:event_jLabel48MouseClicked
 
@@ -1547,6 +1654,87 @@ public class Oders extends javax.swing.JFrame {
         double p=1;
             jTextField6.setText(Double.toString(p));
     }//GEN-LAST:event_jCheckBox6MouseClicked
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jLabel47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel47MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField20.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField20.setText(Double.toString(p));
+        }
+
+    }//GEN-LAST:event_jLabel47MouseClicked
+
+    private void jLabel46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel46MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField21.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField21.setText(Double.toString(p));
+        }
+
+    }//GEN-LAST:event_jLabel46MouseClicked
+
+    private void jLabel45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel45MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField22.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField22.setText(Double.toString(p));
+        }
+
+    }//GEN-LAST:event_jLabel45MouseClicked
+
+    private void jLabel35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField13.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField13.setText(Double.toString(p));
+        }
+
+    }//GEN-LAST:event_jLabel35MouseClicked
+
+    private void jLabel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField14.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField14.setText(Double.toString(p));
+        }
+
+    }//GEN-LAST:event_jLabel34MouseClicked
+
+    private void jLabel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField15.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField15.setText(Double.toString(p));
+        }
+
+    }//GEN-LAST:event_jLabel33MouseClicked
+
+    private void jLabel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField16.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField16.setText(Double.toString(p));
+        }
+
+    }//GEN-LAST:event_jLabel32MouseClicked
 
     public void setColor(JLabel p){
         p.setBackground(new Color(205,200,35));
