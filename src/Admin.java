@@ -463,7 +463,22 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_stockManagementMouseClicked
 
     private void btnOKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOKMouseClicked
-        // TODO add your handling code here:
+        String Cust_Name = FLname.getText();
+        String Email = email1.getText();
+        String Mobile_No = MobNumber.getText();
+        
+        if(Cust_Name.isEmpty()||Email.isEmpty()||Mobile_No.isEmpty()){
+            JOptionPane.showMessageDialog(this, 
+                    "Please enter all fields", 
+                    "Try again", 
+                    JOptionPane.ERROR_MESSAGE);
+            
+        }else{
+            DefaultTableModel model = (DefaultTableModel)tblCustomer.getModel();
+            model.addRow(new Object[]{Cust_Name, Email, Mobile_No});
+        }
+        
+        
         Oders od = new Oders();
         od.setVisible(true);
         this.dispose();
@@ -537,6 +552,7 @@ public class Admin extends javax.swing.JFrame {
             
         }catch(Exception ex){
             System.out.println("Error : " +ex.getMessage());
+            
         }
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
