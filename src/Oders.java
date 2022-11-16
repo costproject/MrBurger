@@ -1,6 +1,11 @@
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JLabel;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -20,6 +25,10 @@ public class Oders extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(this);
     }
+        Connection con;
+        Statement st;
+        ResultSet rs;
+        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,7 +46,7 @@ public class Oders extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        BILL_TABLE_ = new javax.swing.JTable();
         jLabel17 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -186,8 +195,8 @@ public class Oders extends javax.swing.JFrame {
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 4, true));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setForeground(new java.awt.Color(246, 166, 0));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        BILL_TABLE_.setForeground(new java.awt.Color(246, 166, 0));
+        BILL_TABLE_.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -204,13 +213,13 @@ public class Oders extends javax.swing.JFrame {
                 "Item_Id", "Item_Name", "Price", "Quantity", "Amount"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setHeaderValue("Item_Id");
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("Item_Name");
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("Price");
-            jTable1.getColumnModel().getColumn(3).setHeaderValue("Quantity");
-            jTable1.getColumnModel().getColumn(4).setHeaderValue("Amount");
+        jScrollPane1.setViewportView(BILL_TABLE_);
+        if (BILL_TABLE_.getColumnModel().getColumnCount() > 0) {
+            BILL_TABLE_.getColumnModel().getColumn(0).setHeaderValue("Item_Id");
+            BILL_TABLE_.getColumnModel().getColumn(1).setHeaderValue("Item_Name");
+            BILL_TABLE_.getColumnModel().getColumn(2).setHeaderValue("Price");
+            BILL_TABLE_.getColumnModel().getColumn(3).setHeaderValue("Quantity");
+            BILL_TABLE_.getColumnModel().getColumn(4).setHeaderValue("Amount");
         }
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 400, 290));
@@ -576,6 +585,11 @@ public class Oders extends javax.swing.JFrame {
         BurgerBoder.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 49, -1, -1));
 
         jCheckBox2.setText("Beef Burger");
+        jCheckBox2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jCheckBox2MouseClicked(evt);
+            }
+        });
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox2ActionPerformed(evt);
@@ -584,6 +598,11 @@ public class Oders extends javax.swing.JFrame {
         BurgerBoder.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 77, -1, -1));
 
         jCheckBox3.setText("Crispy Chicken Burger");
+        jCheckBox3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jCheckBox3MouseClicked(evt);
+            }
+        });
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox3ActionPerformed(evt);
@@ -592,6 +611,11 @@ public class Oders extends javax.swing.JFrame {
         BurgerBoder.add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 105, -1, -1));
 
         jCheckBox4.setText("Chicken Cheese Burger");
+        jCheckBox4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jCheckBox4MouseClicked(evt);
+            }
+        });
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox4ActionPerformed(evt);
@@ -600,6 +624,11 @@ public class Oders extends javax.swing.JFrame {
         BurgerBoder.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 133, -1, -1));
 
         jCheckBox5.setText("Creamy Mushroom Burger");
+        jCheckBox5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jCheckBox5MouseClicked(evt);
+            }
+        });
         jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox5ActionPerformed(evt);
@@ -608,6 +637,11 @@ public class Oders extends javax.swing.JFrame {
         BurgerBoder.add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 161, -1, -1));
 
         jCheckBox6.setText("Grilled - Prawn Burger");
+        jCheckBox6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jCheckBox6MouseClicked(evt);
+            }
+        });
         jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox6ActionPerformed(evt);
@@ -623,7 +657,7 @@ public class Oders extends javax.swing.JFrame {
                 jLabel14MouseClicked(evt);
             }
         });
-        BurgerBoder.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 189, 14, 22));
+        BurgerBoder.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 14, 22));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("-");
@@ -633,7 +667,7 @@ public class Oders extends javax.swing.JFrame {
                 jLabel12MouseClicked(evt);
             }
         });
-        BurgerBoder.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 161, 14, 22));
+        BurgerBoder.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 14, 22));
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("-");
@@ -643,7 +677,7 @@ public class Oders extends javax.swing.JFrame {
                 jLabel10MouseClicked(evt);
             }
         });
-        BurgerBoder.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 133, 14, 22));
+        BurgerBoder.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 14, 22));
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("-");
@@ -653,7 +687,7 @@ public class Oders extends javax.swing.JFrame {
                 jLabel8MouseClicked(evt);
             }
         });
-        BurgerBoder.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 105, 14, 22));
+        BurgerBoder.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 14, 22));
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("-");
@@ -663,7 +697,7 @@ public class Oders extends javax.swing.JFrame {
                 jLabel6MouseClicked(evt);
             }
         });
-        BurgerBoder.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 77, 14, 22));
+        BurgerBoder.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 14, 22));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("-");
@@ -673,71 +707,101 @@ public class Oders extends javax.swing.JFrame {
                 jLabel2MouseClicked(evt);
             }
         });
-        BurgerBoder.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 49, 14, 22));
+        BurgerBoder.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 14, 22));
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("00");
-        BurgerBoder.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 49, 31, -1));
+        BurgerBoder.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 40, -1));
 
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("00");
-        BurgerBoder.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 77, 31, -1));
+        BurgerBoder.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 40, -1));
 
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField3.setText("00");
-        BurgerBoder.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 105, 31, -1));
+        BurgerBoder.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 40, -1));
 
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField4.setText("00");
-        BurgerBoder.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 133, 31, -1));
+        BurgerBoder.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 40, -1));
 
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.setText("00");
-        BurgerBoder.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 161, 31, -1));
+        BurgerBoder.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 161, 40, -1));
 
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setText("00");
-        BurgerBoder.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 189, 31, -1));
+        BurgerBoder.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 189, 40, -1));
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("+");
         jLabel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel15.setPreferredSize(new java.awt.Dimension(8, 16));
-        BurgerBoder.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 189, 14, 22));
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
+        BurgerBoder.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 14, 22));
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("+");
         jLabel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel13.setPreferredSize(new java.awt.Dimension(8, 16));
-        BurgerBoder.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 161, 14, 22));
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
+        BurgerBoder.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 14, 22));
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("+");
         jLabel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel11.setPreferredSize(new java.awt.Dimension(8, 16));
-        BurgerBoder.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 133, 14, 22));
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
+        BurgerBoder.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 14, 22));
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("+");
         jLabel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel9.setPreferredSize(new java.awt.Dimension(8, 16));
-        BurgerBoder.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 105, 14, 22));
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        BurgerBoder.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 14, 22));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("+");
         jLabel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel7.setPreferredSize(new java.awt.Dimension(8, 16));
-        BurgerBoder.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 77, 14, 22));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        BurgerBoder.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 14, 22));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("+");
         jLabel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel5.setPreferredSize(new java.awt.Dimension(8, 16));
-        BurgerBoder.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 49, 14, 22));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        BurgerBoder.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 14, 22));
 
         burgerBoder.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         burgerBoder.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "BURGERS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
-        BurgerBoder.add(burgerBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 280, 220));
+        BurgerBoder.add(burgerBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 290, 230));
 
         jPanel1.add(BurgerBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 320, 240));
 
@@ -1016,6 +1080,49 @@ public class Oders extends javax.swing.JFrame {
         jTextField17.setText(Double.toString(grTotal));
         grTotal=Double.parseDouble(jTextField17.getText());
         
+        
+        
+        
+        
+        try
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            DefaultTableModel t1=(DefaultTableModel) BILL_TABLE_.getModel();
+            int q=1;
+            int p=0;
+            int amt;
+            Object v="Chicken Burger";
+            rs=st.executeQuery("select * from menu where Item_Name='"+v+"';");
+            while (rs.next())
+            {
+                Object row[]={rs.getString(1),rs.getString(2),rs.getString(3),q};
+                t1.addRow(row);
+            }
+            int r=t1.getRowCount();
+            for (int i=0;i<r;i++)
+            {
+              p=Integer.parseInt(""+t1.getValueAt(i,2));
+              amt=p*q;
+              t1.setValueAt(amt,i,4);
+            }
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }//GEN-LAST:event_grTotalMouseClicked
 
     private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
@@ -1114,65 +1221,149 @@ public class Oders extends javax.swing.JFrame {
     private void totalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_totalMouseClicked
         // TODO add your handling code here:
         double total=0;
+        String[] id = new String[19];
+        int[] qn = new int[19];
+        int i =0;
         if(jCheckBox1.isSelected()){
-            total=total+500;
+            int p;
+            p=Integer.parseInt(jTextField1.getText());
+            total=total+(500*p);
+            qn[i]=p;
+            id[i]="BUR001";
+            i+=1;
         }
         if(jCheckBox2.isSelected()){
-            total=total+600;
+            int p;
+            p=Integer.parseInt(jTextField2.getText());
+            total=total+(500*p);
+            qn[i]=p;
+            id[i]="BUR002";
+            i+=1;
         }
         if(jCheckBox3.isSelected()){
-            total=total+700;
+            int p;
+            p=Integer.parseInt(jTextField3.getText());
+            total=total+(500*p);
+            qn[i]=p;
+            id[i]="";
+            i+=1;
         }
         if(jCheckBox4.isSelected()){
-            total=total+700;
+            int p;
+            p=Integer.parseInt(jTextField4.getText());
+            total=total+(500*p);
+            qn[i]=p;
+            id[i]="";
+            i+=1;
         }
         if(jCheckBox5.isSelected()){
-            total=total+700;
+            int p;
+            p=Integer.parseInt(jTextField5.getText());
+            total=total+(500*p);
+            qn[i]=p;
+            id[i]="";
+            i+=1;
         }
         if(jCheckBox6.isSelected()){
-            total=total+800;
+            double p;
+            p=Double.parseDouble(jTextField6.getText());
+            total=total+(500*p);
         }
         if(jCheckBox7.isSelected()){
-            total=total+200;
+            double p;
+            p=Double.parseDouble(jTextField7.getText());
+            total=total+(500*p);
         }
         if(jCheckBox8.isSelected()){
-            total=total+250;
+            double p;
+            p=Double.parseDouble(jTextField8.getText());
+            total=total+(250*p);
         }
         if(jCheckBox9.isSelected()){
-            total=total+200;
+            double p;
+            p=Double.parseDouble(jTextField9.getText());
+            total=total+(200*p);
         }
         if(jCheckBox10.isSelected()){
-            total=total+100;
+            double p;
+            p=Double.parseDouble(jTextField10.getText());
+            total=total+(100*p);
         }
         if(jCheckBox11.isSelected()){
-            total=total+150;
+            double p;
+            p=Double.parseDouble(jTextField18.getText());
+            total=total+(150*p);
         }
         if(jCheckBox13.isSelected()){
-            total=total+550;
+            double p;
+            p=Double.parseDouble(jTextField13.getText());
+            total=total+(550*p);            
         }
         if(jCheckBox14.isSelected()){
-            total=total+200;
+            double p;
+            p=Double.parseDouble(jTextField14.getText());
+            total=total+(200*p);
         }
         if(jCheckBox15.isSelected()){
-            total=total+540;
+            double p;
+            p=Double.parseDouble(jTextField15.getText());
+            total=total+(540*p);
         }
         if(jCheckBox16.isSelected()){
-            total=total+740;
+            double p;
+            p=Double.parseDouble(jTextField16.getText());
+            total=total+(740*p);
         }
         if(jCheckBox19.isSelected()){
-            total=total+200;
+            double p;
+            p=Double.parseDouble(jTextField19.getText());
+            total=total+(200*p);
         }
         if(jCheckBox20.isSelected()){
-            total=total+250;
+            double p;
+            p=Double.parseDouble(jTextField20.getText());
+            total=total+(250*p);
         }
         if(jCheckBox21.isSelected()){
-            total=total+250;
+            double p;
+            p=Double.parseDouble(jTextField21.getText());
+            total=total+(250*p);
         }
         if(jCheckBox22.isSelected()){
-            total=total+150;
+            double p;
+            p=Double.parseDouble(jTextField22.getText());
+            total=total+(150*p);
         }
         jTextField23.setText(Double.toString(total));
         total=Double.parseDouble(jTextField23.getText());
+        
+        try
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            DefaultTableModel t1=(DefaultTableModel) BILL_TABLE_.getModel();
+            int q=1;
+            int p=0;
+            int amt;
+            int j=t1.getRowCount();
+            for (j = 0; j < 10; j++) {
+                Object oId = id[j];
+                int oQn = qn[j];
+                rs=st.executeQuery("select * from items where Item_Id='"+id[j]+"';");  
+                Object row[]={rs.getString(1),rs.getString(2),rs.getString(3),qn[j]};
+                t1.addRow(row);
+            }
+            int r=t1.getRowCount();
+            for (int k=0;i<r;k++)
+            {
+              p=Integer.parseInt(""+t1.getValueAt(i,2));
+              amt=p*qn[k];
+              t1.setValueAt(amt,i,4);
+            }
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
         
     }//GEN-LAST:event_totalMouseClicked
 
@@ -1202,27 +1393,52 @@ public class Oders extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox1MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField2.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField2.setText(Double.toString(p));
+        }
 
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField4.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField4.setText(Double.toString(p));
+        }
   
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField3.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField3.setText(Double.toString(p));
+        }
 
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField5.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField5.setText(Double.toString(p));
+        }
  
     }//GEN-LAST:event_jLabel12MouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField6.getText());
+        if (p !=0) {
+            p-=1;
+            jTextField6.setText(Double.toString(p));
+        }
 
     }//GEN-LAST:event_jLabel14MouseClicked
 
@@ -1252,6 +1468,85 @@ public class Oders extends javax.swing.JFrame {
     private void jLabel48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseClicked
 
     }//GEN-LAST:event_jLabel48MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        double p;
+        p=Double.parseDouble(jTextField1.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField1.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        double p;
+        p=Double.parseDouble(jTextField2.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField2.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        double p;
+        p=Double.parseDouble(jTextField3.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField3.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        double p;
+        p=Double.parseDouble(jTextField4.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField4.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        double p;
+        p=Double.parseDouble(jTextField5.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField5.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        double p;
+        p=Double.parseDouble(jTextField6.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField6.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void jCheckBox2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox2MouseClicked
+        double p=1;
+            jTextField2.setText(Double.toString(p));
+    }//GEN-LAST:event_jCheckBox2MouseClicked
+
+    private void jCheckBox3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox3MouseClicked
+        double p=1;
+            jTextField3.setText(Double.toString(p));
+    }//GEN-LAST:event_jCheckBox3MouseClicked
+
+    private void jCheckBox4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseClicked
+        double p=1;
+            jTextField4.setText(Double.toString(p));
+    }//GEN-LAST:event_jCheckBox4MouseClicked
+
+    private void jCheckBox5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox5MouseClicked
+        double p=1;
+            jTextField5.setText(Double.toString(p));
+    }//GEN-LAST:event_jCheckBox5MouseClicked
+
+    private void jCheckBox6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox6MouseClicked
+        double p=1;
+            jTextField6.setText(Double.toString(p));
+    }//GEN-LAST:event_jCheckBox6MouseClicked
 
     public void setColor(JLabel p){
         p.setBackground(new Color(205,200,35));
@@ -1296,6 +1591,7 @@ public class Oders extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AppetizerBoder;
+    private javax.swing.JTable BILL_TABLE_;
     private javax.swing.JPanel BeveragesBoder;
     private javax.swing.JPanel BurgerBoder;
     private javax.swing.JPanel DessertBoder;
@@ -1378,7 +1674,6 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
