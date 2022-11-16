@@ -428,7 +428,7 @@ public class StockManagement extends javax.swing.JFrame {
             ps.executeUpdate();  
             
             
-                JOptionPane.showMessageDialog(this, "oyeee we done");
+                JOptionPane.showMessageDialog(this, "Inserted Successfully!");
                 //model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});
             
         }catch(Exception e){

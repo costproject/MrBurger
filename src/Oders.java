@@ -46,6 +46,26 @@ public class Oders extends javax.swing.JFrame {
         String time=hour+":"+minute+":"+second;
         date1.setText(date);
         time1.setText(time);
+        
+        
+        
+        
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "SELECT Order_Id FROM orders;";
+            PreparedStatement ps = con.prepareStatement(s);
+            ResultSet rs = ps.executeQuery();
+            int x=0;
+            while(rs.next()){
+                x = rs.getInt(1);
+            }
+            x+=1;
+            jLabel4.setText(Integer.toString(x));
+        }
+        catch(Exception e){
+            System.out.println(e);
+    } 
 
 
         
@@ -63,6 +83,7 @@ public class Oders extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel49 = new javax.swing.JLabel();
         time1 = new javax.swing.JLabel();
         date1 = new javax.swing.JLabel();
         cust = new javax.swing.JLabel();
@@ -184,11 +205,16 @@ public class Oders extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1080, 720));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(246, 166, 0));
+        jLabel49.setText("Cust_Id :");
+        jPanel1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 70, -1));
+
         time1.setForeground(new java.awt.Color(246, 161, 0));
         jPanel1.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 90, 20));
 
         date1.setForeground(new java.awt.Color(246, 161, 0));
-        jPanel1.add(date1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 70, 20));
+        jPanel1.add(date1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 70, 20));
 
         cust.setForeground(new java.awt.Color(246, 161, 0));
         cust.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -196,7 +222,7 @@ public class Oders extends javax.swing.JFrame {
                 custMouseClicked(evt);
             }
         });
-        jPanel1.add(cust, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 80, 20));
+        jPanel1.add(cust, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 70, 20));
 
         grTotal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         grTotal.setForeground(new java.awt.Color(246, 166, 0));
@@ -224,8 +250,7 @@ public class Oders extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(246, 166, 0));
-        jLabel4.setText("Date & Time:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 100, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 30, 20));
 
         jTextField11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField11.setForeground(new java.awt.Color(246, 166, 0));
@@ -1219,7 +1244,7 @@ public class Oders extends javax.swing.JFrame {
     }//GEN-LAST:event_grTotalMouseEntered
 
     String outp(int out){
-        String outp = "RS. " +Integer.toString(out);
+        String outp =Integer.toString(out);
         return outp;
     }
     
@@ -1255,29 +1280,66 @@ public class Oders extends javax.swing.JFrame {
 
     private void back2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back2MouseClicked
         // TODO add your handling code here:
-       /*try{
+        try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
-            String s = "select * from login where UserName=? and Password=?";
+            String s = "INSERT INTO orders(Cust_Id,Date,Time,Sub_Total,Discount,Grand_Total) VALUES (?,?,?,?,?,?);";
             PreparedStatement ps = con.prepareStatement(s);
-            ps.setString(1, un.getText());
-            ps.setString(2, pw.getText());
-            ResultSet rs = ps.executeQuery();
-            if(rs.next()){
-                 //JOptionPane.showMessageDialog(this,"Login Succesfully");
-                ad.setVisible(true);
-                this.dispose();
-            }
-            else {
-                JOptionPane.showMessageDialog(this,"Login Failed");
-                un.setText("");
-                pw.setText(""); 
+            int CustId = Integer.parseInt(cust.getText());
+            String Date1 = date1.getText();
+            String Time1 = time1.getText();
+            int SubTotal = Integer.parseInt(jTextField24.getText());
+            int Discount1 = Integer.parseInt(jTextField25.getText());
+            int GrandTotal = Integer.parseInt(jTextField12.getText());
+            
+            
+            ps.setInt(1,CustId);
+            ps.setString(2,Date1);
+            ps.setString(3,Time1);
+            ps.setInt(4,SubTotal);
+            ps.setInt(5,Discount1);
+            ps.setInt(6,GrandTotal);
+            ps.executeUpdate();  
+            JOptionPane.showMessageDialog(this, "Inserted Successfully!");
         }
         catch(Exception e){
-            
-        }**/
+            System.out.println(e);
+        
     }//GEN-LAST:event_back2MouseClicked
 
+        
+        
+        
+        
+        
+        
+        try {
+            DefaultTableModel tb=(DefaultTableModel) BILL_TABLE_.getModel();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            for (int i = 0; i < BILL_TABLE_.getRowCount(); i++) {
+                String s = "INSERT INTO ordered_items(Order_Id,Item_Id,Price,Quantity,Amount) VALUES (?,?,?,?,?);";
+                int OrdId = Integer.parseInt(cust.getText());
+                String itemid = date1.getText();
+                int Price = Integer.parseInt(jTextField24.getText());
+                int Quantity = Integer.parseInt(jTextField25.getText());
+                int Amount = Integer.parseInt(jTextField12.getText()); 
+                PreparedStatement ps = con.prepareStatement(s);
+            ps.setInt(1,OrdId);
+            ps.setString(2,itemid);
+            ps.setInt(3,Price);
+            ps.setInt(4,Quantity);
+            ps.setInt(5,Amount);
+            ps.executeUpdate();  
+                        JOptionPane.showMessageDialog(this, "Inserted Successfully!");
+
+            }}
+         
+        catch(Exception e){
+            System.out.println(e);
+    }                    
+        
+    }
     private void back2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back2MouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_back2MouseEntered
@@ -2090,6 +2152,7 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
