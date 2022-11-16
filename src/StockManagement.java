@@ -1,6 +1,12 @@
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -44,11 +50,11 @@ public class StockManagement extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        customer = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        item = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -122,14 +128,19 @@ public class StockManagement extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setForeground(new java.awt.Color(246, 166, 0));
         jButton2.setText("UPDATE");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, 30));
 
         jLabel18.setFont(new java.awt.Font("STXingkai", 1, 48)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(246, 166, 0));
         jLabel18.setText("Mr. Burger");
 
-        jTable2.setForeground(new java.awt.Color(246, 166, 0));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        customer.setForeground(new java.awt.Color(246, 166, 0));
+        customer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -156,7 +167,7 @@ public class StockManagement extends javax.swing.JFrame {
                 "Cust_Id", "Cust_Name", "Email", "Mobile_No"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(customer);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -188,8 +199,8 @@ public class StockManagement extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(246, 166, 0));
         jLabel17.setText("Mr. Burger");
 
-        jTable1.setForeground(new java.awt.Color(246, 166, 0));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        item.setForeground(new java.awt.Color(246, 166, 0));
+        item.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -216,7 +227,7 @@ public class StockManagement extends javax.swing.JFrame {
                 "Item_Id", "Item_Name", "Price", "Quantity"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(item);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -253,6 +264,11 @@ public class StockManagement extends javax.swing.JFrame {
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.setMaximumSize(new java.awt.Dimension(59, 29));
         jLabel2.setMinimumSize(new java.awt.Dimension(59, 29));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, 106, 30));
 
         jLabel3.setBackground(new java.awt.Color(246, 166, 0));
@@ -262,6 +278,11 @@ public class StockManagement extends javax.swing.JFrame {
         jLabel3.setText("CLEAR");
         jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 106, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
@@ -281,6 +302,11 @@ public class StockManagement extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setForeground(new java.awt.Color(246, 166, 0));
         jButton1.setText("UPDATE");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, -1, 30));
 
         jSeparator2.setForeground(new java.awt.Color(246, 166, 0));
@@ -318,7 +344,7 @@ public class StockManagement extends javax.swing.JFrame {
     }
     
     private void backMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseEntered
-        // TODO add your handling code here:
+        // TODO add your handling code here:           
     }//GEN-LAST:event_backMouseEntered
 
     private void backMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseExited
@@ -332,6 +358,114 @@ public class StockManagement extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_backMouseClicked
 
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "select * from customer";
+            PreparedStatement ps = con.prepareStatement(s);
+            ResultSet rs = ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)customer.getModel();
+            model.setRowCount(0);
+            
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        
+            try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "select * from items";
+            PreparedStatement ps = con.prepareStatement(s);
+            ResultSet rs = ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)item.getModel();
+            model.setRowCount(0);
+            
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3)});
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel)customer.getModel();
+        
+        model.setRowCount(0);
+        model.setRowCount(5);
+        
+        DefaultTableModel model2 = (DefaultTableModel)item.getModel();
+        
+        model2.setRowCount(0);
+        model2.setRowCount(5);
+        
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+           try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+
+            String s = "UPDATE customer SET Cust_Name = ? ,Email = ?, Mobile_No = ? WHERE Cust_Id = ?";
+            System.out.println("query done");
+            PreparedStatement ps = con.prepareStatement(s);
+            String Name = jTextField20.getText();
+            String email = jTextField26.getText();
+            String Mob = jTextField25.getText();
+            int id = Integer.parseInt(jTextField18.getText());            
+            
+            ps.setString(1,Name);
+            ps.setString(2,email);
+            ps.setString(3,Mob);
+            ps.setInt(4,id);
+            ps.executeUpdate();  
+            
+            
+                JOptionPane.showMessageDialog(this, "oyeee we done");
+                //model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});
+            
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+
+            String s = "UPDATE items SET Price = ? ,Quantity = ? WHERE Item_Id = ?";
+            System.out.println("query done");
+            PreparedStatement ps = con.prepareStatement(s);
+            int Price = Integer.parseInt(jTextField19.getText());
+            int Quantity = Integer.parseInt(jTextField24.getText());
+            String id = jTextField17.getText();            
+            
+            ps.setInt(1,Price);
+            ps.setInt(2,Quantity);
+            ps.setString(3,id);
+            ps.executeUpdate();  
+            
+            
+                JOptionPane.showMessageDialog(this, "oyeee we done");
+                //model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});
+            
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
+
+  
+        
+        
     /**
      * @param args the command line arguments
      */
@@ -369,6 +503,8 @@ public class StockManagement extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel back;
+    private javax.swing.JTable customer;
+    private javax.swing.JTable item;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -387,8 +523,6 @@ public class StockManagement extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
@@ -397,4 +531,9 @@ public class StockManagement extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
     // End of variables declaration//GEN-END:variables
+   
 }
+
+
+
+
