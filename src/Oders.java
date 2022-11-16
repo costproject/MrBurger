@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.HashSet;
+import java.util.Set;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
@@ -18,17 +20,10 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Oders extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Oders
-     */
     public Oders() {
         initComponents();
         this.setLocationRelativeTo(this);
     }
-       /** Connection con;
-        Statement st;
-        ResultSet rs;*/
-        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -198,29 +193,13 @@ public class Oders extends javax.swing.JFrame {
         BILL_TABLE_.setForeground(new java.awt.Color(246, 166, 0));
         BILL_TABLE_.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Item_Id", "Item_Name", "Price", "Quantity", "Amount"
             }
         ));
         jScrollPane1.setViewportView(BILL_TABLE_);
-        if (BILL_TABLE_.getColumnModel().getColumnCount() > 0) {
-            BILL_TABLE_.getColumnModel().getColumn(0).setHeaderValue("Item_Id");
-            BILL_TABLE_.getColumnModel().getColumn(1).setHeaderValue("Item_Name");
-            BILL_TABLE_.getColumnModel().getColumn(2).setHeaderValue("Price");
-            BILL_TABLE_.getColumnModel().getColumn(3).setHeaderValue("Quantity");
-            BILL_TABLE_.getColumnModel().getColumn(4).setHeaderValue("Amount");
-        }
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 400, 290));
 
@@ -1029,80 +1008,68 @@ public class Oders extends javax.swing.JFrame {
 
     private void jCheckBox22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox22ActionPerformed
         // TODO add your handling code here:
-         double p=1;
-            jTextField22.setText(Double.toString(p));
+        int p=1;
+        jTextField22.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox22ActionPerformed
 
     private void jCheckBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox21ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField21.setText(Double.toString(p));
+        int p=1;
+        jTextField21.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox21ActionPerformed
 
     private void jCheckBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox20ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField20.setText(Double.toString(p));
+        int p=1;
+        jTextField20.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox20ActionPerformed
 
     private void jCheckBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox19ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField19.setText(Double.toString(p));
+        int p=1;
+        jTextField19.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox19ActionPerformed
 
     private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField16.setText(Double.toString(p));
+        int p=1;
+        jTextField16.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox16ActionPerformed
 
     private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField15.setText(Double.toString(p));
+        int p=1;
+        jTextField15.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox15ActionPerformed
 
     private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField14.setText(Double.toString(p));
+        int p=1;
+        jTextField14.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox14ActionPerformed
 
     private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField13.setText(Double.toString(p));
+        int p=1;
+        jTextField13.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox13ActionPerformed
 
     private void jCheckBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox11ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField18.setText(Double.toString(p));
+        int p=1;
+        jTextField18.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox11ActionPerformed
 
     private void jCheckBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox10ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField10.setText(Double.toString(p));
+        int p=1;
+        jTextField10.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox10ActionPerformed
 
     private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField9.setText(Double.toString(p));
+        int p=1;
+        jTextField9.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox9ActionPerformed
 
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField8.setText(Double.toString(p));
+        int p=1;
+        jTextField8.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox8ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
-        // TODO add your handling code here:
-         double p=1;
-            jTextField7.setText(Double.toString(p));
+        int p=1;
+        jTextField7.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
@@ -1137,59 +1104,24 @@ public class Oders extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_grTotalMouseEntered
 
+    String outp(int out){
+        String outp = "RS. " +Integer.toString(out);
+        return outp;
+    }
+    
     private void grTotalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grTotalMouseClicked
         // TODO add your handling code here:
-        Double grTotal=0.0;
-        Double total=Double.parseDouble(jTextField23.getText());
-        double x = Double.parseDouble(jTextField11.getText());
-        grTotal=total-(total*x/100);
-        jTextField17.setText(Double.toString(grTotal));
-        grTotal=Double.parseDouble(jTextField17.getText());
+        int grTotal=0;  //sandun changed int to int
+        int total=Integer.parseInt(jTextField23.getText());
+        int x = Integer.parseInt(jTextField11.getText());
+        int discount = total*x/100;
+        grTotal=total-discount;
         
+        jTextField25.setText(outp(discount));
+        jTextField17.setText(outp(grTotal));
+        jTextField12.setText(outp(grTotal));
         
-        
-        
-        
-        try
-        {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
-            DefaultTableModel t1=(DefaultTableModel) BILL_TABLE_.getModel();
-            int q=1;
-            int p=0;
-            int amt;
-            Object v="Chicken Burger";
-            PreparedStatement ps = con.prepareStatement("select * from menu where Item_Name='"+v+"';");
-            ResultSet rs = ps.executeQuery();
-            while (rs.next())
-            {
-                Object row[]={rs.getString(1),rs.getString(2),rs.getString(3),q};
-                t1.addRow(row);
-            }
-            int r=t1.getRowCount();
-            for (int i=0;i<r;i++)
-            {
-              p=Integer.parseInt(""+t1.getValueAt(i,2));
-              amt=p*q;
-              t1.setValueAt(amt,i,4);
-            }
-        }
-        catch(Exception e){
-            System.out.println(e);
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        //grTotal=Integer.parseInt(jTextField17.getText());  
     }//GEN-LAST:event_grTotalMouseClicked
 
     private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
@@ -1287,14 +1219,14 @@ public class Oders extends javax.swing.JFrame {
 
     private void totalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_totalMouseClicked
         // TODO add your handling code here:
-        double total=0;
+        int total=0;
         String[] id = new String[19];
         int[] qn = new int[19];
         int i =0;
         if(jCheckBox1.isSelected()){
             int p;
             p=Integer.parseInt(jTextField1.getText());
-            total=total+(500*p);
+            //total=total+(500*p);
             qn[i]=p;
             id[i]="BUR001";
             i+=1;
@@ -1302,7 +1234,7 @@ public class Oders extends javax.swing.JFrame {
         if(jCheckBox2.isSelected()){
             int p;
             p=Integer.parseInt(jTextField2.getText());
-            total=total+(500*p);
+            //total=total+(500*p);
             qn[i]=p;
             id[i]="BUR002";
             i+=1;
@@ -1310,7 +1242,7 @@ public class Oders extends javax.swing.JFrame {
         if(jCheckBox3.isSelected()){
             int p;
             p=Integer.parseInt(jTextField3.getText());
-            total=total+(500*p);
+            //total=total+(500*p);
             qn[i]=p;
             id[i]="";
             i+=1;
@@ -1318,7 +1250,7 @@ public class Oders extends javax.swing.JFrame {
         if(jCheckBox4.isSelected()){
             int p;
             p=Integer.parseInt(jTextField4.getText());
-            total=total+(500*p);
+            ///total=total+(500*p);
             qn[i]=p;
             id[i]="";
             i+=1;
@@ -1326,83 +1258,82 @@ public class Oders extends javax.swing.JFrame {
         if(jCheckBox5.isSelected()){
             int p;
             p=Integer.parseInt(jTextField5.getText());
-            total=total+(500*p);
+            //total=total+(500*p);
             qn[i]=p;
             id[i]="";
             i+=1;
-        }
+        }   /**
         if(jCheckBox6.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField6.getText());
-            total=total+(500*p);
+            int p;
+            p=Integer.parseInt(jTextField6.getText());
+            //total=total+(500*p);
         }
         if(jCheckBox7.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField7.getText());
-            total=total+(500*p);
+            int p;
+            p=Integer.parseInt(jTextField7.getText());
+            //total=total+(500*p);
         }
         if(jCheckBox8.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField8.getText());
-            total=total+(250*p);
+            int p;
+            p=Integer.parseInt(jTextField8.getText());
+            ////total=total+(250*p);
         }
         if(jCheckBox9.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField9.getText());
-            total=total+(200*p);
+            int p;
+            p=Integer.parseInt(jTextField9.getText());
+            //total=total+(200*p);
         }
         if(jCheckBox10.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField10.getText());
-            total=total+(100*p);
+            int p;
+            p=Integer.parseInt(jTextField10.getText());
+            //total=total+(100*p);
         }
         if(jCheckBox11.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField18.getText());
-            total=total+(150*p);
+            int p;
+            p=Integer.parseInt(jTextField18.getText());
+            //total=total+(150*p);
         }
         if(jCheckBox13.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField13.getText());
-            total=total+(550*p);            
+            int p;
+            p=Integer.parseInt(jTextField13.getText());
+           // total=total+(550*p);            
         }
         if(jCheckBox14.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField14.getText());
-            total=total+(200*p);
+            int p;
+            p=Integer.parseInt(jTextField14.getText());
+           // total=total+(200*p);
         }
         if(jCheckBox15.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField15.getText());
-            total=total+(540*p);
+            int p;
+            p=Integer.parseInt(jTextField15.getText());
+           // total=total+(540*p);
         }
         if(jCheckBox16.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField16.getText());
-            total=total+(740*p);
+            int p;
+            p=Integer.parseInt(jTextField16.getText());
+            //total=total+(740*p);
         }
         if(jCheckBox19.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField19.getText());
-            total=total+(200*p);
+            int p;
+            p=Integer.parseInt(jTextField19.getText());
+            //total=total+(200*p);
         }
         if(jCheckBox20.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField20.getText());
-            total=total+(250*p);
+            int p;
+            p=Integer.parseInt(jTextField20.getText());
+           // total=total+(250*p);
         }
         if(jCheckBox21.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField21.getText());
-            total=total+(250*p);
+            int p;
+            p=Integer.parseInt(jTextField21.getText());
+            //total=total+(250*p);
         }
         if(jCheckBox22.isSelected()){
-            double p;
-            p=Double.parseDouble(jTextField22.getText());
-            total=total+(150*p);
-        }
-        jTextField23.setText(Double.toString(total));
-        total=Double.parseDouble(jTextField23.getText());
+            int p;
+            p=Integer.parseInt(jTextField22.getText());
+           // total=total+(150*p);
+        }  */
+        
         
         try
         {
@@ -1415,24 +1346,29 @@ public class Oders extends javax.swing.JFrame {
             int j=t1.getRowCount();
             for (j = 0; j < 10; j++) {
                 Object oId = id[j];
-                int oQn = qn[j];
-                Object v="Chicken Burger";
-                PreparedStatement ps = con.prepareStatement("select * from menu where Item_Name='"+v+"';");
-                ResultSet rs = ps.executeQuery();  
-                Object row[]={rs.getString(1),rs.getString(2),rs.getString(3),qn[j]};
-                t1.addRow(row);
+                String oQn = Integer.toString(qn[j]);
+                PreparedStatement ps = con.prepareStatement("select * from items where Item_id='"+id[j]+"';");
+                ResultSet rs = ps.executeQuery(); 
+                System.out.println(""+rs);
+                while(rs.next()){
+                    t1.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),oQn});
+                }
             }
             int r=t1.getRowCount();
-            for (int k=0;i<r;k++)
+            for (int k=0;k<r;k++)
             {
-              p=Integer.parseInt(""+t1.getValueAt(i,2));
+              p=Integer.parseInt(""+t1.getValueAt(k,2));
               amt=p*qn[k];
-              t1.setValueAt(amt,i,4);
+              total+=amt;
+              t1.setValueAt(amt,k,4);
             }
+            
         }
         catch(Exception e){
             System.out.println(e);
         }
+        jTextField23.setText(Integer.toString(total));
+        jTextField24.setText(outp(total));
         
     }//GEN-LAST:event_totalMouseClicked
 
@@ -1446,89 +1382,89 @@ public class Oders extends javax.swing.JFrame {
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField1.getText());
+        int p;
+        p=Integer.parseInt(jTextField1.getText());
         if (p !=0) {
             p-=1;
-            jTextField1.setText(Double.toString(p));
+            jTextField1.setText(Integer.toString(p));
         }
         
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jCheckBox1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox1MouseClicked
         // TODO add your handling code here:
-        double p=1;
-            jTextField1.setText(Double.toString(p));
+        int p=1;
+            jTextField1.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox1MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField2.getText());
+        int p;
+        p=Integer.parseInt(jTextField2.getText());
         if (p !=0) {
             p-=1;
-            jTextField2.setText(Double.toString(p));
+            jTextField2.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField4.getText());
+        int p;
+        p=Integer.parseInt(jTextField4.getText());
         if (p !=0) {
             p-=1;
-            jTextField4.setText(Double.toString(p));
+            jTextField4.setText(Integer.toString(p));
         }
   
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField3.getText());
+        int p;
+        p=Integer.parseInt(jTextField3.getText());
         if (p !=0) {
             p-=1;
-            jTextField3.setText(Double.toString(p));
+            jTextField3.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField5.getText());
+        int p;
+        p=Integer.parseInt(jTextField5.getText());
         if (p !=0) {
             p-=1;
-            jTextField5.setText(Double.toString(p));
+            jTextField5.setText(Integer.toString(p));
         }
  
     }//GEN-LAST:event_jLabel12MouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField6.getText());
+        int p;
+        p=Integer.parseInt(jTextField6.getText());
         if (p !=0) {
             p-=1;
-            jTextField6.setText(Double.toString(p));
+            jTextField6.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
         // TODO add your handling code h
-        double p;
-        p=Double.parseDouble(jTextField7.getText());
+        int p;
+        p=Integer.parseInt(jTextField7.getText());
         if (p !=0) {
             p-=1;
-            jTextField7.setText(Double.toString(p));
+            jTextField7.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField8.getText());
+        int p;
+        p=Integer.parseInt(jTextField8.getText());
         if (p !=0) {
             p-=1;
-            jTextField8.setText(Double.toString(p));
+            jTextField8.setText(Integer.toString(p));
         }
 
   
@@ -1536,11 +1472,11 @@ public class Oders extends javax.swing.JFrame {
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField9.getText());
+        int p;
+        p=Integer.parseInt(jTextField9.getText());
         if (p !=0) {
             p-=1;
-            jTextField9.setText(Double.toString(p));
+            jTextField9.setText(Integer.toString(p));
         }
 
        
@@ -1548,114 +1484,114 @@ public class Oders extends javax.swing.JFrame {
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         // TODO add your handli
-        double p;
-        p=Double.parseDouble(jTextField10.getText());
+        int p;
+        p=Integer.parseInt(jTextField10.getText());
         if (p !=0) {
             p-=1;
-            jTextField10.setText(Double.toString(p));
+            jTextField10.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField18.getText());
+        int p;
+        p=Integer.parseInt(jTextField18.getText());
         if (p !=0) {
             p-=1;
-            jTextField18.setText(Double.toString(p));
+            jTextField18.setText(Integer.toString(p));
         }
 
        
     }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jLabel48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField19.getText());
+        int p;
+        p=Integer.parseInt(jTextField19.getText());
         if (p !=0) {
             p-=1;
-            jTextField19.setText(Double.toString(p));
+            jTextField19.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel48MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField1.getText());
+        int p;
+        p=Integer.parseInt(jTextField1.getText());
         if (p !=0) {
             p+=1;
-            jTextField1.setText(Double.toString(p));
+            jTextField1.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField2.getText());
+        int p;
+        p=Integer.parseInt(jTextField2.getText());
         if (p !=0) {
             p+=1;
-            jTextField2.setText(Double.toString(p));
+            jTextField2.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField3.getText());
+        int p;
+        p=Integer.parseInt(jTextField3.getText());
         if (p !=0) {
             p+=1;
-            jTextField3.setText(Double.toString(p));
+            jTextField3.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField4.getText());
+        int p;
+        p=Integer.parseInt(jTextField4.getText());
         if (p !=0) {
             p+=1;
-            jTextField4.setText(Double.toString(p));
+            jTextField4.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField5.getText());
+        int p;
+        p=Integer.parseInt(jTextField5.getText());
         if (p !=0) {
             p+=1;
-            jTextField5.setText(Double.toString(p));
+            jTextField5.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel13MouseClicked
 
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
-        double p;
-        p=Double.parseDouble(jTextField6.getText());
+        int p;
+        p=Integer.parseInt(jTextField6.getText());
         if (p !=0) {
             p+=1;
-            jTextField6.setText(Double.toString(p));
+            jTextField6.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel15MouseClicked
 
     private void jCheckBox2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox2MouseClicked
-        double p=1;
-            jTextField2.setText(Double.toString(p));
+        int p=1;
+            jTextField2.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox2MouseClicked
 
     private void jCheckBox3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox3MouseClicked
-        double p=1;
-            jTextField3.setText(Double.toString(p));
+        int p=1;
+            jTextField3.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox3MouseClicked
 
     private void jCheckBox4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseClicked
-        double p=1;
-            jTextField4.setText(Double.toString(p));
+        int p=1;
+            jTextField4.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox4MouseClicked
 
     private void jCheckBox5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox5MouseClicked
-        double p=1;
-            jTextField5.setText(Double.toString(p));
+        int p=1;
+            jTextField5.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox5MouseClicked
 
     private void jCheckBox6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox6MouseClicked
-        double p=1;
-            jTextField6.setText(Double.toString(p));
+        int p=1;
+            jTextField6.setText(Integer.toString(p));
     }//GEN-LAST:event_jCheckBox6MouseClicked
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
@@ -1664,77 +1600,77 @@ public class Oders extends javax.swing.JFrame {
 
     private void jLabel47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel47MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField20.getText());
+        int p;
+        p=Integer.parseInt(jTextField20.getText());
         if (p !=0) {
             p-=1;
-            jTextField20.setText(Double.toString(p));
+            jTextField20.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel47MouseClicked
 
     private void jLabel46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel46MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField21.getText());
+        int p;
+        p=Integer.parseInt(jTextField21.getText());
         if (p !=0) {
             p-=1;
-            jTextField21.setText(Double.toString(p));
+            jTextField21.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel46MouseClicked
 
     private void jLabel45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel45MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField22.getText());
+        int p;
+        p=Integer.parseInt(jTextField22.getText());
         if (p !=0) {
             p-=1;
-            jTextField22.setText(Double.toString(p));
+            jTextField22.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel45MouseClicked
 
     private void jLabel35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField13.getText());
+        int p;
+        p=Integer.parseInt(jTextField13.getText());
         if (p !=0) {
             p-=1;
-            jTextField13.setText(Double.toString(p));
+            jTextField13.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel35MouseClicked
 
     private void jLabel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField14.getText());
+        int p;
+        p=Integer.parseInt(jTextField14.getText());
         if (p !=0) {
             p-=1;
-            jTextField14.setText(Double.toString(p));
+            jTextField14.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel34MouseClicked
 
     private void jLabel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField15.getText());
+        int p;
+        p=Integer.parseInt(jTextField15.getText());
         if (p !=0) {
             p-=1;
-            jTextField15.setText(Double.toString(p));
+            jTextField15.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel33MouseClicked
 
     private void jLabel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField16.getText());
+        int p;
+        p=Integer.parseInt(jTextField16.getText());
         if (p !=0) {
             p-=1;
-            jTextField16.setText(Double.toString(p));
+            jTextField16.setText(Integer.toString(p));
         }
 
     }//GEN-LAST:event_jLabel32MouseClicked
