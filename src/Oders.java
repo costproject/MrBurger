@@ -1,10 +1,10 @@
-
+import java.sql.*;
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import javax.swing.JLabel;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -25,9 +25,9 @@ public class Oders extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(this);
     }
-        Connection con;
+       /** Connection con;
         Statement st;
-        ResultSet rs;
+        ResultSet rs;*/
         
 
     /**
@@ -1093,7 +1093,8 @@ public class Oders extends javax.swing.JFrame {
             int p=0;
             int amt;
             Object v="Chicken Burger";
-            rs=st.executeQuery("select * from menu where Item_Name='"+v+"';");
+            PreparedStatement ps = con.prepareStatement("select * from menu where Item_Name='"+v+"';");
+            ResultSet rs = ps.executeQuery();
             while (rs.next())
             {
                 Object row[]={rs.getString(1),rs.getString(2),rs.getString(3),q};
@@ -1349,7 +1350,9 @@ public class Oders extends javax.swing.JFrame {
             for (j = 0; j < 10; j++) {
                 Object oId = id[j];
                 int oQn = qn[j];
-                rs=st.executeQuery("select * from items where Item_Id='"+id[j]+"';");  
+                Object v="Chicken Burger";
+                PreparedStatement ps = con.prepareStatement("select * from menu where Item_Name='"+v+"';");
+                ResultSet rs = ps.executeQuery();  
                 Object row[]={rs.getString(1),rs.getString(2),rs.getString(3),qn[j]};
                 t1.addRow(row);
             }
