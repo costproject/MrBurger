@@ -470,10 +470,13 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOKMouseClicked
 
     private void order1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_order1MouseClicked
-        
+       String msg=cust_id.getText();
+        new Oders(msg).setVisible(true);
+        setVisible(false);
+     
 // TODO add your handling code here:
-        Oders od = new Oders();
-        od.setVisible(true);
+        /*Oders od = new Oders();
+        od.setVisible(true);**/
         this.dispose();
     }//GEN-LAST:event_order1MouseClicked
 

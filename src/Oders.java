@@ -8,6 +8,9 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -24,7 +27,32 @@ public class Oders extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(this);
     }
+    
+    public Oders(String msg){
+        initComponents();
+        cust.setText(msg);
+        
+        //date and time
+        int day,month,year,second,minute,hour;
+        GregorianCalendar gc = new GregorianCalendar();
+        day = gc.get(Calendar.DAY_OF_MONTH);
+        month = gc.get(Calendar.MONTH);
+        year = gc.get(Calendar.YEAR);
+        second=gc.get(Calendar.SECOND);
+        minute=gc.get(Calendar.MINUTE);
+        hour=gc.get(Calendar.HOUR);
+        month=month+1;
+        String date=day+"/"+month+"/"+year;
+        String time=hour+":"+minute+":"+second;
+        date1.setText(date);
+        time1.setText(time);
 
+
+        
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,6 +63,9 @@ public class Oders extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        time1 = new javax.swing.JLabel();
+        date1 = new javax.swing.JLabel();
+        cust = new javax.swing.JLabel();
         grTotal = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -96,6 +127,7 @@ public class Oders extends javax.swing.JFrame {
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         BurgerBoder = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
@@ -152,6 +184,20 @@ public class Oders extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1080, 720));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        time1.setForeground(new java.awt.Color(246, 161, 0));
+        jPanel1.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 90, 20));
+
+        date1.setForeground(new java.awt.Color(246, 161, 0));
+        jPanel1.add(date1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 70, 20));
+
+        cust.setForeground(new java.awt.Color(246, 161, 0));
+        cust.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                custMouseClicked(evt);
+            }
+        });
+        jPanel1.add(cust, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 80, 20));
+
         grTotal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         grTotal.setForeground(new java.awt.Color(246, 166, 0));
         grTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -174,12 +220,12 @@ public class Oders extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(246, 166, 0));
         jLabel3.setText("Cust_Id :");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 70, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(246, 166, 0));
-        jLabel4.setText("Date :");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 6, 50, -1));
+        jLabel4.setText("Date & Time:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 100, -1));
 
         jTextField11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField11.setForeground(new java.awt.Color(246, 166, 0));
@@ -624,6 +670,9 @@ public class Oders extends javax.swing.JFrame {
         jPanel1.add(BeveragesBoder, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 280, 230));
 
         BurgerBoder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel37.setText("jLabel37");
+        BurgerBoder.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, -1, -1));
 
         jCheckBox1.setText("Chicken Burger");
         jCheckBox1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1206,6 +1255,27 @@ public class Oders extends javax.swing.JFrame {
 
     private void back2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back2MouseClicked
         // TODO add your handling code here:
+       /*try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mrburger", "root", "");
+            String s = "select * from login where UserName=? and Password=?";
+            PreparedStatement ps = con.prepareStatement(s);
+            ps.setString(1, un.getText());
+            ps.setString(2, pw.getText());
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                 //JOptionPane.showMessageDialog(this,"Login Succesfully");
+                ad.setVisible(true);
+                this.dispose();
+            }
+            else {
+                JOptionPane.showMessageDialog(this,"Login Failed");
+                un.setText("");
+                pw.setText(""); 
+        }
+        catch(Exception e){
+            
+        }**/
     }//GEN-LAST:event_back2MouseClicked
 
     private void back2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back2MouseEntered
@@ -1218,6 +1288,8 @@ public class Oders extends javax.swing.JFrame {
 
     private void clearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearMouseClicked
         // TODO add your handling code here:
+        DefaultTableModel model=(DefaultTableModel) BILL_TABLE_.getModel();
+        model.setRowCount(0);
     }//GEN-LAST:event_clearMouseClicked
 
     private void clearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearMouseEntered
@@ -1309,7 +1381,7 @@ public class Oders extends javax.swing.JFrame {
             p=Integer.parseInt(jTextField3.getText());
             //total=total+(500*p);
             qn[i]=p;
-            id[i]="";
+            id[i]="BUR003";
             i+=1;
         }
         if(jCheckBox4.isSelected()){
@@ -1317,87 +1389,114 @@ public class Oders extends javax.swing.JFrame {
             p=Integer.parseInt(jTextField4.getText());
             ///total=total+(500*p);
             qn[i]=p;
-            id[i]="";
+            id[i]="BUR004";
             i+=1;
         }
         if(jCheckBox5.isSelected()){
             int p;
             p=Integer.parseInt(jTextField5.getText());
-            //total=total+(500*p);
             qn[i]=p;
-            id[i]="";
+            id[i]="BUR005";
             i+=1;
-        }   /**
+        }   
         if(jCheckBox6.isSelected()){
             int p;
             p=Integer.parseInt(jTextField6.getText());
-            //total=total+(500*p);
+            qn[i]=p;
+            id[i]="BUR006";
+            i+=1;
         }
         if(jCheckBox7.isSelected()){
             int p;
             p=Integer.parseInt(jTextField7.getText());
-            //total=total+(500*p);
+            qn[i]=p;
+            id[i]="APP001";
+            i+=1;
         }
         if(jCheckBox8.isSelected()){
             int p;
             p=Integer.parseInt(jTextField8.getText());
-            ////total=total+(250*p);
+            qn[i]=p;
+            id[i]="APP002";
+            i+=1;
         }
         if(jCheckBox9.isSelected()){
             int p;
             p=Integer.parseInt(jTextField9.getText());
-            //total=total+(200*p);
+            qn[i]=p;
+            id[i]="APP003";
+            i+=1;
         }
         if(jCheckBox10.isSelected()){
             int p;
             p=Integer.parseInt(jTextField10.getText());
-            //total=total+(100*p);
+            qn[i]=p;
+            id[i]="APP004";
+            i+=1;
         }
         if(jCheckBox11.isSelected()){
             int p;
             p=Integer.parseInt(jTextField18.getText());
-            //total=total+(150*p);
+            qn[i]=p;
+            id[i]="APP005";
+            i+=1;
         }
         if(jCheckBox13.isSelected()){
             int p;
             p=Integer.parseInt(jTextField13.getText());
-           // total=total+(550*p);            
+            qn[i]=p;
+            id[i]="BEV001";
+            i+=1;           
         }
         if(jCheckBox14.isSelected()){
             int p;
             p=Integer.parseInt(jTextField14.getText());
-           // total=total+(200*p);
+            qn[i]=p;
+            id[i]="BEV002";
+            i+=1;
         }
         if(jCheckBox15.isSelected()){
             int p;
             p=Integer.parseInt(jTextField15.getText());
-           // total=total+(540*p);
+            qn[i]=p;
+            id[i]="BEV003";
+            i+=1;
         }
         if(jCheckBox16.isSelected()){
             int p;
             p=Integer.parseInt(jTextField16.getText());
-            //total=total+(740*p);
+            qn[i]=p;
+            id[i]="BEV004";
+            i+=1;
         }
         if(jCheckBox19.isSelected()){
             int p;
             p=Integer.parseInt(jTextField19.getText());
-            //total=total+(200*p);
+            qn[i]=p;
+            id[i]="DES001";
+            i+=1;;
         }
         if(jCheckBox20.isSelected()){
             int p;
             p=Integer.parseInt(jTextField20.getText());
-           // total=total+(250*p);
+            qn[i]=p;
+            id[i]="DES002";
+            i+=1;
         }
         if(jCheckBox21.isSelected()){
             int p;
             p=Integer.parseInt(jTextField21.getText());
-            //total=total+(250*p);
+            qn[i]=p;
+            id[i]="DES003";
+            i+=1;
         }
         if(jCheckBox22.isSelected()){
             int p;
             p=Integer.parseInt(jTextField22.getText());
-           // total=total+(150*p);
-        }  */
+            qn[i]=p;
+            id[i]="DES004";
+            i+=1;
+        }  
         
         
         try
@@ -1742,133 +1841,138 @@ public class Oders extends javax.swing.JFrame {
 
     private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField7.getText());
+        int p;
+        p=Integer.parseInt(jTextField7.getText());
         if (p !=0) {
             p+=1;
-            jTextField7.setText(Double.toString(p));
+            jTextField7.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel28MouseClicked
 
     private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField8.getText());
+        int p;
+        p=Integer.parseInt(jTextField8.getText());
         if (p !=0) {
             p+=1;
-            jTextField8.setText(Double.toString(p));
+            jTextField8.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel27MouseClicked
 
     private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField9.getText());
+        int p;
+        p=Integer.parseInt(jTextField9.getText());
         if (p !=0) {
             p+=1;
-            jTextField9.setText(Double.toString(p));
+            jTextField9.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel26MouseClicked
 
     private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField10.getText());
+        int p;
+        p=Integer.parseInt(jTextField10.getText());
         if (p !=0) {
             p+=1;
-            jTextField10.setText(Double.toString(p));
+            jTextField10.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel25MouseClicked
 
     private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField18.getText());
+        int p;
+        p=Integer.parseInt(jTextField18.getText());
         if (p !=0) {
             p+=1;
-            jTextField18.setText(Double.toString(p));
+            jTextField18.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel24MouseClicked
 
     private void jLabel54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField19.getText());
+        int p;
+        p=Integer.parseInt(jTextField19.getText());
         if (p !=0) {
             p+=1;
-            jTextField19.setText(Double.toString(p));
+            jTextField19.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel54MouseClicked
 
     private void jLabel53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel53MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField20.getText());
+        int p;
+        p=Integer.parseInt(jTextField20.getText());
         if (p !=0) {
             p+=1;
-            jTextField20.setText(Double.toString(p));
+            jTextField20.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel53MouseClicked
 
     private void jLabel52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel52MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField21.getText());
+        int p;
+        p=Integer.parseInt(jTextField21.getText());
         if (p !=0) {
             p+=1;
-            jTextField21.setText(Double.toString(p));
+            jTextField21.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel52MouseClicked
 
     private void jLabel51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel51MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField22.getText());
+        int p;
+        p=Integer.parseInt(jTextField22.getText());
         if (p !=0) {
             p+=1;
-            jTextField22.setText(Double.toString(p));
+            jTextField22.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel51MouseClicked
 
     private void jLabel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel41MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField13.getText());
+        int p;
+        p=Integer.parseInt(jTextField13.getText());
         if (p !=0) {
             p+=1;
-            jTextField13.setText(Double.toString(p));
+            jTextField13.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel41MouseClicked
 
     private void jLabel40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel40MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField14.getText());
+        int p;
+        p=Integer.parseInt(jTextField14.getText());
         if (p !=0) {
             p+=1;
-            jTextField14.setText(Double.toString(p));
+            jTextField14.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel40MouseClicked
 
     private void jLabel39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel39MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField15.getText());
+        int p;
+        p=Integer.parseInt(jTextField15.getText());
         if (p !=0) {
             p+=1;
-            jTextField15.setText(Double.toString(p));
+            jTextField15.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel39MouseClicked
 
     private void jLabel38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseClicked
         // TODO add your handling code here:
-        double p;
-        p=Double.parseDouble(jTextField16.getText());
+        int p;
+        p=Integer.parseInt(jTextField16.getText());
         if (p !=0) {
             p+=1;
-            jTextField16.setText(Double.toString(p));
+            jTextField16.setText(Integer.toString(p));
         }
     }//GEN-LAST:event_jLabel38MouseClicked
+
+    private void custMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_custMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_custMouseClicked
 
     public void setColor(JLabel p){
         p.setBackground(new Color(205,200,35));
@@ -1920,6 +2024,8 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JLabel back2;
     private javax.swing.JLabel burgerBoder;
     private javax.swing.JLabel clear;
+    private javax.swing.JLabel cust;
+    private javax.swing.JLabel date1;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel grTotal;
     private javax.swing.JCheckBox jCheckBox1;
@@ -1971,6 +2077,7 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
@@ -2022,6 +2129,7 @@ public class Oders extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel reset2;
+    private javax.swing.JLabel time1;
     private javax.swing.JLabel total;
     // End of variables declaration//GEN-END:variables
 }
