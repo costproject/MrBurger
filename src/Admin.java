@@ -11,14 +11,30 @@ import javax.swing.*;
  *
  * @author Sandun Siwantha
  */
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+import javax.swing.table.DefaultTableModel;
+
+
 public class Admin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Admin
-     */
+    Connection con;
+    
     public Admin() {
         initComponents();
         this.setLocationRelativeTo(this);
+        
+        String url="jdbc:mysql://localhost/mrburger";
+        String user="root";
+        String pass="";
+        try{
+            con = DriverManager.getConnection(url,user,pass);
+        }catch(Exception ex){
+            System.out.println("Error : " + ex.getMessage());
+        }
     }
 
     /**
@@ -34,39 +50,39 @@ public class Admin extends javax.swing.JFrame {
         stockManagement1 = new javax.swing.JLabel();
         cust_id = new javax.swing.JTextField();
         order1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        tab3 = new javax.swing.JLabel();
         logout = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
+        jPanelMenu = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblDes = new javax.swing.JTable();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        tblBur = new javax.swing.JTable();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable5 = new javax.swing.JTable();
+        tblApp = new javax.swing.JTable();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTable6 = new javax.swing.JTable();
+        tblBev = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         FLname = new javax.swing.JTextField();
-        Number = new javax.swing.JTextField();
+        MobNumber = new javax.swing.JTextField();
         LUser = new javax.swing.JLabel();
         boderReg = new javax.swing.JLabel();
         LUser1 = new javax.swing.JLabel();
         email1 = new javax.swing.JTextField();
         LUser2 = new javax.swing.JLabel();
-        order = new javax.swing.JLabel();
+        btnOK = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         stockManagement = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanelOrd = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jPanel4 = new javax.swing.JPanel();
+        tblOrders = new javax.swing.JTable();
+        jPanelCust = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tblCustomer = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -106,10 +122,15 @@ public class Admin extends javax.swing.JFrame {
         });
         jPanel1.add(order1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 133, 43));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(246, 166, 0));
-        jLabel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CUST_ID", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(246, 166, 0))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 150, 120));
+        tab3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tab3.setForeground(new java.awt.Color(246, 166, 0));
+        tab3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CUST_ID", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(246, 166, 0))); // NOI18N
+        tab3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tab3MouseClicked(evt);
+            }
+        });
+        jPanel1.add(tab3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 150, 120));
 
         logout.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         logout.setForeground(new java.awt.Color(246, 166, 0));
@@ -132,10 +153,15 @@ public class Admin extends javax.swing.JFrame {
 
         jTabbedPane1.setForeground(new java.awt.Color(246, 166, 0));
         jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MouseClicked(evt);
+            }
+        });
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblDes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -146,16 +172,16 @@ public class Admin extends javax.swing.JFrame {
                 "Item_Id", "Item_Name", "Quantity"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
+        jScrollPane1.setViewportView(tblDes);
+        if (tblDes.getColumnModel().getColumnCount() > 0) {
+            tblDes.getColumnModel().getColumn(0).setResizable(false);
+            tblDes.getColumnModel().getColumn(1).setResizable(false);
+            tblDes.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 450, 120));
+        jPanelMenu.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 450, 120));
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        tblBur.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -166,16 +192,25 @@ public class Admin extends javax.swing.JFrame {
                 "Item_Id", "Item_Name", "Quantity"
             }
         ));
-        jScrollPane4.setViewportView(jTable4);
-        if (jTable4.getColumnModel().getColumnCount() > 0) {
-            jTable4.getColumnModel().getColumn(0).setResizable(false);
-            jTable4.getColumnModel().getColumn(1).setResizable(false);
-            jTable4.getColumnModel().getColumn(2).setResizable(false);
+        tblBur.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tblBurAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jScrollPane4.setViewportView(tblBur);
+        if (tblBur.getColumnModel().getColumnCount() > 0) {
+            tblBur.getColumnModel().getColumn(0).setResizable(false);
+            tblBur.getColumnModel().getColumn(1).setResizable(false);
+            tblBur.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        jPanel2.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 450, 120));
+        jPanelMenu.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 450, 120));
 
-        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+        tblApp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -186,16 +221,16 @@ public class Admin extends javax.swing.JFrame {
                 "Item_Id", "Item_Name", "Quantity"
             }
         ));
-        jScrollPane5.setViewportView(jTable5);
-        if (jTable5.getColumnModel().getColumnCount() > 0) {
-            jTable5.getColumnModel().getColumn(0).setResizable(false);
-            jTable5.getColumnModel().getColumn(1).setResizable(false);
-            jTable5.getColumnModel().getColumn(2).setResizable(false);
+        jScrollPane5.setViewportView(tblApp);
+        if (tblApp.getColumnModel().getColumnCount() > 0) {
+            tblApp.getColumnModel().getColumn(0).setResizable(false);
+            tblApp.getColumnModel().getColumn(1).setResizable(false);
+            tblApp.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        jPanel2.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 450, 120));
+        jPanelMenu.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 450, 120));
 
-        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+        tblBev.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -206,66 +241,81 @@ public class Admin extends javax.swing.JFrame {
                 "Item_Id", "Item_Name", "Quantity"
             }
         ));
-        jScrollPane6.setViewportView(jTable6);
-        if (jTable6.getColumnModel().getColumnCount() > 0) {
-            jTable6.getColumnModel().getColumn(0).setResizable(false);
-            jTable6.getColumnModel().getColumn(1).setResizable(false);
-            jTable6.getColumnModel().getColumn(2).setResizable(false);
+        jScrollPane6.setViewportView(tblBev);
+        if (tblBev.getColumnModel().getColumnCount() > 0) {
+            tblBev.getColumnModel().getColumn(0).setResizable(false);
+            tblBev.getColumnModel().getColumn(1).setResizable(false);
+            tblBev.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        jPanel2.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 450, 120));
+        jPanelMenu.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 450, 120));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Deserts");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, -1));
-        jPanel2.add(FLname, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 110, 160, -1));
-        jPanel2.add(Number, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 160, -1));
+        jPanelMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, -1));
+
+        FLname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FLnameActionPerformed(evt);
+            }
+        });
+        jPanelMenu.add(FLname, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 110, 160, -1));
+        jPanelMenu.add(MobNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 160, -1));
 
         LUser.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         LUser.setText("Mobile Number :");
-        jPanel2.add(LUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
+        jPanelMenu.add(LUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
 
         boderReg.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         boderReg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         boderReg.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MEMBERSHIP", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
-        jPanel2.add(boderReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 320, 210));
+        jPanelMenu.add(boderReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 320, 210));
 
         LUser1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         LUser1.setText("First & Last Name :");
-        jPanel2.add(LUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, -1, -1));
-        jPanel2.add(email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 160, -1));
+        jPanelMenu.add(LUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, -1, -1));
+        jPanelMenu.add(email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 160, -1));
 
         LUser2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         LUser2.setText("Email :");
-        jPanel2.add(LUser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, -1, -1));
+        jPanelMenu.add(LUser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, -1, -1));
 
-        order.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        order.setText("OK");
-        order.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        order.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        order.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                orderMouseClicked(evt);
+        btnOK.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnOK.setText("OK");
+        btnOK.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        btnOK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnOK.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                btnOKAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        jPanel2.add(order, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 133, 43));
+        btnOK.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnOKMouseClicked(evt);
+            }
+        });
+        jPanelMenu.add(btnOK, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 133, 43));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Today's Special", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 16, 480, 640));
+        jPanelMenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 16, 480, 640));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Burgers");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+        jPanelMenu.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Appetizers");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+        jPanelMenu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Beverages");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
+        jPanelMenu.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
         stockManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         stockManagement.setForeground(new java.awt.Color(246, 166, 0));
@@ -278,14 +328,20 @@ public class Admin extends javax.swing.JFrame {
                 stockManagementMouseClicked(evt);
             }
         });
-        jPanel2.add(stockManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 180, 160));
+        jPanelMenu.add(stockManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 180, 160));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/wallpaperBlack3.jpg"))); // NOI18N
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 180, 160));
+        jPanelMenu.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 180, 160));
 
-        jTabbedPane1.addTab("MENU & CUSTOMER REGISTRATION", jPanel2);
+        jTabbedPane1.addTab("MENU & CUSTOMER REGISTRATION", jPanelMenu);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jPanelOrd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelOrdMouseClicked(evt);
+            }
+        });
+
+        tblOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -296,28 +352,34 @@ public class Admin extends javax.swing.JFrame {
                 "Order_Id", "Cust_Id", "Date", "Time", "Sub_Total", "Discount", "Grand_Total"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tblOrders);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelOrdLayout = new javax.swing.GroupLayout(jPanelOrd);
+        jPanelOrd.setLayout(jPanelOrdLayout);
+        jPanelOrdLayout.setHorizontalGroup(
+            jPanelOrdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOrdLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 783, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(27, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        jPanelOrdLayout.setVerticalGroup(
+            jPanelOrdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOrdLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(83, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("ORDERS", jPanel3);
+        jTabbedPane1.addTab("ORDERS", jPanelOrd);
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        jPanelCust.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelCustMouseClicked(evt);
+            }
+        });
+
+        tblCustomer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -328,26 +390,31 @@ public class Admin extends javax.swing.JFrame {
                 "Cust_Id", "Cust_Name", "Email", "Mobile_No"
             }
         ));
-        jScrollPane3.setViewportView(jTable3);
+        tblCustomer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblCustomerMouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(tblCustomer);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelCustLayout = new javax.swing.GroupLayout(jPanelCust);
+        jPanelCust.setLayout(jPanelCustLayout);
+        jPanelCustLayout.setHorizontalGroup(
+            jPanelCustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCustLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 796, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        jPanelCustLayout.setVerticalGroup(
+            jPanelCustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCustLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("CUSTOMERS", jPanel4);
+        jTabbedPane1.addTab("CUSTOMERS", jPanelCust);
 
         jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 18, -1, -1));
 
@@ -381,7 +448,8 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutMouseEntered
 
     private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
-        // TODO add your handling code here:
+    
+// TODO add your handling code here:
         Welcome lg = new Welcome();
         lg.setVisible(true);
         this.dispose();
@@ -394,26 +462,88 @@ public class Admin extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_stockManagementMouseClicked
 
-    private void orderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderMouseClicked
+    private void btnOKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOKMouseClicked
         // TODO add your handling code here:
         Oders od = new Oders();
         od.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_orderMouseClicked
+    }//GEN-LAST:event_btnOKMouseClicked
 
     private void order1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_order1MouseClicked
-        // TODO add your handling code here:
+        
+// TODO add your handling code here:
         Oders od = new Oders();
         od.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_order1MouseClicked
 
     private void stockManagement1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockManagement1MouseClicked
-        // TODO add your handling code here:
+
         StockManagement stm = new StockManagement();
         stm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_stockManagement1MouseClicked
+
+    private void tblBurAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tblBurAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblBurAncestorAdded
+
+    private void FLnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FLnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FLnameActionPerformed
+
+    private void btnOKAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_btnOKAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnOKAncestorAdded
+
+    private void tab3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tab3MouseClicked
+
+    private void jPanelOrdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelOrdMouseClicked
+        
+        
+    }//GEN-LAST:event_jPanelOrdMouseClicked
+
+    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
+        String sql1="SELECT * FROM orders";
+        try{
+            PreparedStatement pst = con.prepareStatement(sql1);
+            ResultSet rs = pst.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)tblOrders.getModel();
+            model.setRowCount(0);
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7)});
+            }
+            
+            
+        }catch(Exception ex){
+            System.out.println("Error : " +ex.getMessage());
+        }
+        
+        String sql2="SELECT * FROM customer";
+        try{
+            PreparedStatement pst = con.prepareStatement(sql2);
+            ResultSet rs = pst.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)tblCustomer.getModel();
+            model.setRowCount(0);
+            while(rs.next()){
+                model.addRow(new String[]{rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)});
+            }
+            
+            
+        }catch(Exception ex){
+            System.out.println("Error : " +ex.getMessage());
+        }
+    }//GEN-LAST:event_jTabbedPane1MouseClicked
+
+    private void jPanelCustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelCustMouseClicked
+        
+    }//GEN-LAST:event_jPanelCustMouseClicked
+
+    private void tblCustomerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCustomerMouseClicked
+       
+    }//GEN-LAST:event_tblCustomerMouseClicked
 
     public void setColor(JLabel p){
         p.setBackground(new Color(205,200,35));
@@ -461,22 +591,22 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel LUser;
     private javax.swing.JLabel LUser1;
     private javax.swing.JLabel LUser2;
-    private javax.swing.JTextField Number;
+    private javax.swing.JTextField MobNumber;
     private javax.swing.JLabel boderReg;
+    private javax.swing.JLabel btnOK;
     private javax.swing.JTextField cust_id;
     private javax.swing.JTextField email1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanelCust;
+    private javax.swing.JPanel jPanelMenu;
+    private javax.swing.JPanel jPanelOrd;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -484,16 +614,16 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTable jTable5;
-    private javax.swing.JTable jTable6;
     private javax.swing.JLabel logout;
-    private javax.swing.JLabel order;
     private javax.swing.JLabel order1;
     private javax.swing.JLabel stockManagement;
     private javax.swing.JLabel stockManagement1;
+    private javax.swing.JLabel tab3;
+    private javax.swing.JTable tblApp;
+    private javax.swing.JTable tblBev;
+    private javax.swing.JTable tblBur;
+    private javax.swing.JTable tblCustomer;
+    private javax.swing.JTable tblDes;
+    private javax.swing.JTable tblOrders;
     // End of variables declaration//GEN-END:variables
 }

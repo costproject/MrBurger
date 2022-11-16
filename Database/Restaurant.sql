@@ -32,8 +32,8 @@ CREATE TABLE Orders 	(
                     Time varchar(10),
                     Sub_Total int,
                     Discount int,
-                    Grand_Total int,
-                    FOREIGN KEY Customer(Cust_Id) REFERENCES Orders(Cust_Id)
+                    Grand_Total int
+                 #   FOREIGN KEY Customer(Cust_Id) REFERENCES Orders(Cust_Id)
                     );
                     
 #Create Ordered_Items
@@ -43,9 +43,9 @@ CREATE TABLE Ordered_Items 	(
                             Price int,
                             Quantity int,
                             Amount int,
-                            PRIMARY KEY (Order_Id,Item_Id),
-                            FOREIGN KEY Items(Item_Id)REFERENCES Ordered_Items(Item_Id),
-                            FOREIGN KEY Orders(Order_Id) REFERENCES Ordered_Items(Order_Id)
+                            PRIMARY KEY (Order_Id,Item_Id)
+            #                FOREIGN KEY Items(Item_Id)REFERENCES Ordered_Items(Item_Id),
+           #                 FOREIGN KEY Orders(Order_Id) REFERENCES Ordered_Items(Order_Id)
                             );
 #SHOW TABLES;
 #DESCRIBE Customer;
