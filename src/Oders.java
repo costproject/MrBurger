@@ -458,24 +458,44 @@ public class Oders extends javax.swing.JFrame {
         jLabel51.setText("+");
         jLabel51.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel51.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel51.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel51MouseClicked(evt);
+            }
+        });
         DessertBoder.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 141, 14, 22));
 
         jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel52.setText("+");
         jLabel52.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel52.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel52.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel52MouseClicked(evt);
+            }
+        });
         DessertBoder.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 113, 14, 22));
 
         jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel53.setText("+");
         jLabel53.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel53.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel53.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel53MouseClicked(evt);
+            }
+        });
         DessertBoder.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 85, 14, 22));
 
         jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel54.setText("+");
         jLabel54.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel54.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel54.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel54MouseClicked(evt);
+            }
+        });
         DessertBoder.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 57, 14, 22));
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -578,24 +598,44 @@ public class Oders extends javax.swing.JFrame {
         jLabel38.setText("+");
         jLabel38.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel38.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel38.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel38MouseClicked(evt);
+            }
+        });
         BeveragesBoder.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 128, 14, 22));
 
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel39.setText("+");
         jLabel39.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel39.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel39.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel39MouseClicked(evt);
+            }
+        });
         BeveragesBoder.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 98, 14, 22));
 
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setText("+");
         jLabel40.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel40.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel40.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel40MouseClicked(evt);
+            }
+        });
         BeveragesBoder.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 68, 14, 22));
 
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText("+");
         jLabel41.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel41.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel41MouseClicked(evt);
+            }
+        });
         BeveragesBoder.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 38, 14, 22));
 
         jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -961,30 +1001,55 @@ public class Oders extends javax.swing.JFrame {
         jLabel24.setText("+");
         jLabel24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel24.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel24MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 174, 14, 22));
 
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("+");
         jLabel25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel25.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel25MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 146, 14, 22));
 
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setText("+");
         jLabel26.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel26.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel26MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 118, 14, 22));
 
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setText("+");
         jLabel27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel27.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel27MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 90, 14, 22));
 
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel28.setText("+");
         jLabel28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel28.setPreferredSize(new java.awt.Dimension(8, 16));
+        jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel28MouseClicked(evt);
+            }
+        });
         AppetizerBoder.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 62, 14, 22));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -1738,6 +1803,136 @@ public class Oders extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jLabel32MouseClicked
+
+    private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField7.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField7.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel28MouseClicked
+
+    private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField8.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField8.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel27MouseClicked
+
+    private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField9.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField9.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel26MouseClicked
+
+    private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField10.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField10.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel25MouseClicked
+
+    private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField18.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField18.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel24MouseClicked
+
+    private void jLabel54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField19.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField19.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel54MouseClicked
+
+    private void jLabel53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel53MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField20.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField20.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel53MouseClicked
+
+    private void jLabel52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel52MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField21.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField21.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel52MouseClicked
+
+    private void jLabel51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel51MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField22.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField22.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel51MouseClicked
+
+    private void jLabel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel41MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField13.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField13.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel41MouseClicked
+
+    private void jLabel40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel40MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField14.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField14.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel40MouseClicked
+
+    private void jLabel39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel39MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField15.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField15.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel39MouseClicked
+
+    private void jLabel38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseClicked
+        // TODO add your handling code here:
+        double p;
+        p=Double.parseDouble(jTextField16.getText());
+        if (p !=0) {
+            p+=1;
+            jTextField16.setText(Double.toString(p));
+        }
+    }//GEN-LAST:event_jLabel38MouseClicked
 
     public void setColor(JLabel p){
         p.setBackground(new Color(205,200,35));
