@@ -55,7 +55,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="a6" red="f6" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Cust_Id :"/>
+            <Property name="text" type="java.lang.String" value="Order_Id :"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

@@ -207,7 +207,7 @@ public class Oders extends javax.swing.JFrame {
 
         jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel49.setForeground(new java.awt.Color(246, 166, 0));
-        jLabel49.setText("Cust_Id :");
+        jLabel49.setText("Order_Id :");
         jPanel1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 70, -1));
 
         time1.setForeground(new java.awt.Color(246, 161, 0));
