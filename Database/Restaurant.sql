@@ -54,8 +54,7 @@ CREATE TABLE Ordered_Items 	(
 #DESCRIBE Ordered_Items;
 
 #Insert Login Info
-INSERT INTO Login Values 	('admin','admin'),
-							('','');
+INSERT INTO Login Values 	('admin','admin');
 
 #Insert Burger Details
 INSERT INTO Items(Item_Id, Item_Name, Price, Quantity)
